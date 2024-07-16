@@ -20,7 +20,7 @@
                     <li><a href=" ../servicios/index.html">Servicios</a></li>
                     <li><a href="#">Agendar cita</a></li>
                     <div class="contenedor_icons">
-                        <a class="navbar-brand" href="../registro/index.html">
+                        <a class="navbar-brand" href="../registro_usr/index.html">
                             <img src="../../img/usuario (1).png" alt="" width="30" height="24">
                         </a>
                         <a class="navbar-brand" href="https://www.google.com.mx/maps/preview">
@@ -39,70 +39,42 @@
         <div class="container">
             <h1>Agenda tu cita hoy</h1>
             <p>La atención dental regular es importante para mantener una sonrisa saludable y feliz.</p>
-            <a href="#" class="cta">Agendar Cita</a>
+            <a href="../registro_usr/index.html" class="cta">Agendar Cita</a>
         </div>
     </section>
-    <section class="form">
+    <section class="catalogo">
         <div class="container">
-            <h2>Agenda tu cita</h2>
-            <p>Rellena el formulario para agendar tu cita.</p>
-            <form action="#">
-                <label for="name">Nombre y apellido</label>
-                <input type="text" id="name" required>
-                <label for="email">Correo electrónico</label>
-                <input type="email" id="email" required>
-                <label for="phone">Teléfono</label>
-                <input type="tel" id="phone" required>
-                <label for="date">Fecha y hora preferida para la cita</label>
-                <input type="datetime-local" id="date" required>
-                <label for="service">Tipo de cita</label>
-                <select id="service">
-                    <option value="consulta">Consulta</option>
-                    <option value="limpieza">Limpieza y profilaxis</option>
-                    <option value="tratamiento">Tratamientos de caries y restauraciones</option>
-                    <option value="ortodoncia">Ortodoncia y tratamientos de alineación</option>
-                    <option value="cirugia">Cirugía oral y maxilofacial</option>
-                </select>
-                <label for="comments">Comentarios o preguntas adicionales</label>
-                <textarea id="comments" rows="4"></textarea>
-                <button type="submit" class="cta">Agendar Cita</button>
-            </form>
-        </div>
-    </section>
-    <section class="services">
-        <div class="container">
-            <h2>Nuestros Servicios</h2>
-            <ul>
+            <h1>Catálogo de Servicios</h1>
+            <ul class="servicios-list">
                 <li>
-                    <h3>Consultas y diagnósticos</h3>
-                    <p>Nuestros dentistas expertos ofrecen consultas y diagnósticos completos para mantener tu sonrisa
-                        saludable.</p>
+                    <img src="../img/caries-dental.png" alt="Icono de tratamiento">
+                    <h2>Tratamientos de caries y restauraciones</h2>
+                    <p>Nuestros dentistas expertos ofrecen tratamientos de caries y restauraciones para devolverle la salud a tus dientes.</p>
+                    <button class="btn-ver-mas">Ver más</button>
                 </li>
                 <li>
-                    <h3>Limpieza y profilaxis</h3>
-                    <p>Nuestros higienistas dentales expertos ofrecen limpiezas y profilaxis profundas para mantener tus
-                        dientes</p>
-                    <img src="../img/Limpieza.jfif" alt="Icono de limpieza">
-                <li>
-                    <h3>Tratamientos de caries y restauraciones</h3>
-                    <p>Nuestros dentistas expertos ofrecen tratamientos de caries y restauraciones para devolverle la
-                        salud a tus dientes.</p>
-                    <img src="../img/caries.jpg" alt="Icono de tratamiento">
-                </li>
-
-                <li>
-
-                    <h3>Ortodoncia y tratamientos de alineación</h3>
-                    <p>Nuestros ortodoncistas expertos ofrecen tratamientos de ortodoncia y alineación para darle una
-                        sonrisa perfecta.</p>
-                    <img src="../img/brackets.jpg" alt="Icono de ortodoncia">
+                    <img src="../img/ortodoncia.png" alt="Icono de ortodoncia">
+                    <h2>Ortodoncia y tratamientos de alineación</h2>
+                    <p>Nuestros ortodoncistas expertos ofrecen tratamientos de ortodoncia y alineación para darle una sonrisa perfecta.</p>
+                    <button class="btn-ver-mas">Ver más</button>
                 </li>
                 <li>
-
-                    <h3>Cirugía oral y maxilofacial</h3>
-                    <p>Nuestros cirujanos expertos ofrecen cirugía oral y maxilofacial para resolver problemas complejos
-                        de salud oral.</p>
-                    <img src="../img/Operacion.webp" alt="Icono de cirugía">
+                    <img src="../img/cirugia-plastica.png" alt="Icono de cirugía">
+                    <h2>Cirugía oral y maxilofacial</h2>
+                    <p>Nuestros cirujanos expertos ofrecen cirugía oral y maxilofacial para resolver problemas complejos de salud oral.</p>
+                    <button class="btn-ver-mas">Ver más</button>
+                </li>
+                <li>
+                    <img src="../img/cepillo-de-dientes.png" alt="Icono de limpieza">
+                    <h2>Limpieza y profilaxis</h2>
+                    <p>Nuestros higienistas dentales ofrecen limpieza y profilaxis para mantener tus dientes y encías saludables.</p>
+                    <button class="btn-ver-mas">Ver más</button>
+                </li>
+                <li>
+                    <img src="../img/higiene.png" alt="Icono de blanqueamiento">
+                    <h2>Blanqueamiento dental</h2>
+                    <p>Nuestros dentistas expertos ofrecen blanqueamiento dental para dejar tus dientes con un brillo impresionante.</p>
+                    <button class="btn-ver-mas">Ver más</button>
                 </li>
             </ul>
         </div>

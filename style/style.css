@@ -14,7 +14,7 @@ body {
 .contenedor_icons {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  grid-gap: -20000px;
+  grid-gap: -2000px;
   margin-left: 1000px;
 }
 .navbar_items {
@@ -407,7 +407,9 @@ input:focus {
 }
 
 .img-radius {
-  margin-left: 500px;
+  margin: auto;
+  display: block;
+  
   border-radius: 5px;
   width: 200px;
   height: 200px;
