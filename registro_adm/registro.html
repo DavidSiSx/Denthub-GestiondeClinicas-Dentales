@@ -57,19 +57,19 @@
             <div class="contenedor-formularios">
                 <!-- Links de los formularios -->
                 <ul class="contenedor-tabs">
-                    <li class="tab tab-segunda active"><a href="#iniciar-sesion">Iniciar Sesión</a></li>
-                    <li class="tab tab-primera"><a href="./registro.html">Registrarse</a></li>
+                    <li class="tab tab-segunda active"><a href="./index.html">Iniciar Sesión</a></li>
+                    <li class="tab tab-primera"><a href="#registrarse">Registrarse</a></li>
                 </ul>
 
                 <!-- Contenido de los Formularios -->
                 <div class="contenido-tab">
                     <!-- Iniciar Sesion -->
                     <div id="iniciar-sesion">
-                        <h1>Iniciar Sesión</h1>
-                        <form action="../Vista_admin/index.html">
+                        <h1>Registrarse</h1>
+                        <form action="../vista_cliente/index.html">
                             <div class="contenedor-input">
                                 <label>
-                                    Usuario <span class="req">*</span>
+                                    Nombre <span class="req">*</span>
                                 </label>
                                 <input type="text" required>
                             </div>
@@ -80,16 +80,28 @@
                                 </label>
                                 <input type="password" required>
                             </div>
-                            <p class="forgot"><a href="../registro_usr/index.html">Eres cliente?</a></p>
+                            <div class="contenedor-input">
+                                <label>
+                                    Correo <span class="req">*</span>
+                                </label>
+                                <input type="text" required>
+                            </div>
+                            <div class="contenedor-input">
+                                <label>
+                                    Telefono <span class="req">*</span >
+                                </label>
+                                <input type="text" required>
+                            </div>
+                            <p class="forgot"><a href="../registro_adm/index.html">Eres admin?</a></p>
 
-                            <input type="submit" class="button button-block" value="Iniciar Sesión">
+                            <a href="../vista_cliente/index.html"><input type="submit" class="button button-block" value="Iniciar Sesión"></a>
                         </form>
                     </div>
 
                     <!-- Registrarse -->
                     <div id="registrarse">
                         <h1>Registrarse</h1>
-                        <form action="../vista_admin/index.html">
+                        <form action="../vista_cliente/index.html">
                             <div class="fila-arriba">
                                 <div class="contenedor-input">
                                     <label>
