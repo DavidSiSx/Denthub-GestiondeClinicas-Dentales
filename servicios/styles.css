@@ -1,0 +1,143 @@
+body {
+    font-family: "Open Sans", sans-serif;
+    background-color: rgb(209, 184, 241);
+  }
+.catalogo {
+    background-color:rgb(209, 184, 241);
+    padding: 20px;
+}
+
+.servicios-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.servicios-list li {
+    margin: 20px;
+    width: calc(33.33% - 20px);
+    background-color: #fff;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.servicios-list img {
+    width: 50px;
+    height: 50px;
+    margin-right: 10px;
+}
+
+.servicios-list h2 {
+    margin-top: 0;
+}
+
+.servicios-list p {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+.btn-ver-mas {
+    background-color: #5d4d81;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.btn-ver-mas:hover {
+    background-color: #5d4d81;
+}
+footer {
+    background-color: #5d4d81;
+    padding: 20px;
+    text-align: center;
+    clear: both;
+  }
+  
+  .footer-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  footer ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  footer li {
+    margin-right: 20px;
+  }
+  
+  footer a {
+    text-decoration: none;
+    color: #fdfdfd;
+  }
+  
+  a:hover {
+    color: #ffffff;
+  }
+  
+  footer p {
+    font-size: 14px;
+    color: #ffffff;
+  }
+  
+  #aviso-privacidad, #terminos-y-condiciones, #mapa-de-sitio {
+    display: none;
+  }
+  
+  #aviso-privacidad:target, #terminos-y-condiciones:target, #mapa-de-sitio:target {
+    display: block;
+    position: absolute;
+  
+    left: 50%;
+    top:150%;
+    transform: translate(-50%, -50%);
+    background-color: #6e6485;
+    opacity: 80%;
+    padding: 20px;
+    border: 1px solid #ddd;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  }
+  .arriba {
+    list-style-type: none;
+    margin: 0;
+    display: block;
+    padding: 0;
+    overflow: hidden;
+    background-color: #5d4d81;
+  }
+  .contenedor_icons {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: -20000px;
+    margin-left: 1000px;
+  }
+  .navbar_items {
+    margin-top: 16px;
+  }
+  
+  .titulo_centrado {
+    text-align: center;
+  }
+  .arriba a {
+    float: left;
+  }
+  
+  .arriba a {
+    display: block;
+    color: #ffffff;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+  }

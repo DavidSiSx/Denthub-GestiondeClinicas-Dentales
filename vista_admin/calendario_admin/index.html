@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="css/mobiscroll.javascript.min.css" rel="stylesheet" />
+  <script src="js/mobiscroll.javascript.min.js"></script>
+  <link rel="stylesheet" href="../../style/style.css">
+  <script>
+    // Ignore this in your implementation
+    window.isMbscDemo = true;
+  </script>
+
+  <title>
+    Responsive
+  </title>
+
+  <!-- Mobiscroll JS and CSS Includes -->
+  <link rel="stylesheet" href="css/mobiscroll.javascript.min.css">
+  <script src="js/mobiscroll.javascript.min.js"></script>
+
+  <style type="text/css">
+    body {
+      margin: 0;
+      padding: 0;
+    }
+
+    body,
+    html {
+      height: 100%;
+    }
+  </style>
+  <nav>
+    <div class="arriba">
+      <a class="navbar-brand" href="#">
+        <img src="/img/logo.png" width="100" height="50" alt="">
+      </a>
+      <div class="navbar_items">
+        <li><a href="../index.html">Home</a></li>
+        <li><a href="./calendario_admin/index.html">Agenda</a></li>
+        <li><a href="../Pacientes/index.html">Pacientes</a></li>
+        <li><a href="../control_de_pagos/index.html">Control de pagos</a></li>
+        <div class="contenedor_icons">
+          <a class="navbar-brand" href="#">
+            <img src="../../img/usuario (1).png" alt="" width="30" height="24">
+          </a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+</head>
+
+<body>
+
+  <div mbsc-page class="demo-responsive-month-view">
+    <div style="height:100%">
+      <div id="demo-responsive-month-view"></div>
+
+    </div>
+  </div>
+
+  <script>
+    mobiscroll.setOptions({
+      theme: 'ios',
+      locale: mobiscroll.localeEs
+    });
+
+    var inst = mobiscroll.eventcalendar('#demo-responsive-month-view', {
+      locale: mobiscroll.localeEs,  // Specify language like: locale: mobiscroll.localePl or omit setting to use default
+      theme: 'ios',                 // Specify theme like: theme: 'ios' or omit setting to use default
+      themeVariant: 'light',      // More info about themeVariant: https://mobiscroll.com/docs/javascript/eventcalendar/api#opt-themeVariant
+      // drag,
+      responsive: {                 // More info about responsive: https://mobiscroll.com/docs/javascript/eventcalendar/api#opt-responsive
+        xsmall: {
+          view: {                   // More info about view: https://mobiscroll.com/docs/javascript/eventcalendar/api#opt-view
+            calendar: {
+              type: 'week',
+            },
+            agenda: {
+              type: 'day',
+            },
+          },
+        },
+        custom: {
+          // Custom breakpoint
+          breakpoint: 600,
+          view: {                   // More info about view: https://mobiscroll.com/docs/javascript/eventcalendar/api#opt-view
+            calendar: {
+              labels: true,         // More info about labels: https://mobiscroll.com/docs/javascript/eventcalendar/api#opt-labels
+            },
+          },
+        },
+      },
+    });
+
+    mobiscroll.getJson(
+      '',
+      function (events) {
+        inst.setEvents(events);
+      },
+      'jsonp',
+    );
+
+  </script>
+
+</body>
+
+</html>

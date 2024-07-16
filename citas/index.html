@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clínica Dental</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="arriba">
+                <a class="navbar-brand" href="#">
+                    <img src="/img/logo.png" width="100" height="50" alt="">
+                </a>
+                <div class="navbar_items">
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href=" ../servicios/index.html">Servicios</a></li>
+                    <li><a href="#">Agendar cita</a></li>
+                    <div class="contenedor_icons">
+                        <a class="navbar-brand" href="../registro/index.html">
+                            <img src="../../img/usuario (1).png" alt="" width="30" height="24">
+                        </a>
+                        <a class="navbar-brand" href="https://www.google.com.mx/maps/preview">
+                            <img src="../img/marcador (2).png" alt="" width="30" height="24">
+                        </a>
+                        <a class="navbar-brand" href="../index.html">
+                            <img src="../img/hogar (2).png" alt="" width="30" height="24">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+
+    </header>
+    <section class="hero">
+        <div class="container">
+            <h1>Agenda tu cita hoy</h1>
+            <p>La atención dental regular es importante para mantener una sonrisa saludable y feliz.</p>
+            <a href="#" class="cta">Agendar Cita</a>
+        </div>
+    </section>
+    <section class="form">
+        <div class="container">
+            <h2>Agenda tu cita</h2>
+            <p>Rellena el formulario para agendar tu cita.</p>
+            <form action="#">
+                <label for="name">Nombre y apellido</label>
+                <input type="text" id="name" required>
+                <label for="email">Correo electrónico</label>
+                <input type="email" id="email" required>
+                <label for="phone">Teléfono</label>
+                <input type="tel" id="phone" required>
+                <label for="date">Fecha y hora preferida para la cita</label>
+                <input type="datetime-local" id="date" required>
+                <label for="service">Tipo de cita</label>
+                <select id="service">
+                    <option value="consulta">Consulta</option>
+                    <option value="limpieza">Limpieza y profilaxis</option>
+                    <option value="tratamiento">Tratamientos de caries y restauraciones</option>
+                    <option value="ortodoncia">Ortodoncia y tratamientos de alineación</option>
+                    <option value="cirugia">Cirugía oral y maxilofacial</option>
+                </select>
+                <label for="comments">Comentarios o preguntas adicionales</label>
+                <textarea id="comments" rows="4"></textarea>
+                <button type="submit" class="cta">Agendar Cita</button>
+            </form>
+        </div>
+    </section>
+    <section class="services">
+        <div class="container">
+            <h2>Nuestros Servicios</h2>
+            <ul>
+                <li>
+                    <h3>Consultas y diagnósticos</h3>
+                    <p>Nuestros dentistas expertos ofrecen consultas y diagnósticos completos para mantener tu sonrisa
+                        saludable.</p>
+                </li>
+                <li>
+                    <h3>Limpieza y profilaxis</h3>
+                    <p>Nuestros higienistas dentales expertos ofrecen limpiezas y profilaxis profundas para mantener tus
+                        dientes</p>
+                    <img src="../img/Limpieza.jfif" alt="Icono de limpieza">
+                <li>
+                    <h3>Tratamientos de caries y restauraciones</h3>
+                    <p>Nuestros dentistas expertos ofrecen tratamientos de caries y restauraciones para devolverle la
+                        salud a tus dientes.</p>
+                    <img src="../img/caries.jpg" alt="Icono de tratamiento">
+                </li>
+
+                <li>
+
+                    <h3>Ortodoncia y tratamientos de alineación</h3>
+                    <p>Nuestros ortodoncistas expertos ofrecen tratamientos de ortodoncia y alineación para darle una
+                        sonrisa perfecta.</p>
+                    <img src="../img/brackets.jpg" alt="Icono de ortodoncia">
+                </li>
+                <li>
+
+                    <h3>Cirugía oral y maxilofacial</h3>
+                    <p>Nuestros cirujanos expertos ofrecen cirugía oral y maxilofacial para resolver problemas complejos
+                        de salud oral.</p>
+                    <img src="../img/Operacion.webp" alt="Icono de cirugía">
+                </li>
+            </ul>
+        </div>
+    </section>
+    <section class="testimonials">
+        <div class="container">
+            <h2>Nuestros Pacientes Hablan</h2>
+            <ul>
+                <li>
+                    <p>"La atención en esta clínica es excepcional. Me siento muy cómodo y seguro en sus manos."</p>
+                    <span>- Juan Pérez</span>
+                </li>
+                <li>
+                    <p>"La limpieza y profilaxis que me hicieron fue increíble. Mi boca se siente fresca y limpia."</p>
+                    <span>- María Rodríguez</span>
+                </li>
+                <li>
+                    <p>"El tratamiento de ortodoncia que me hicieron cambió mi vida. Ahora tengo una sonrisa perfecta."
+                    </p>
+                    <span>- Carlos Gómez</span>
+                </li>
+            </ul>
+        </div>
+    </section>
+    <footer>
+        <div class="footer-container">
+            <ul>
+                <li><a href="#aviso-privacidad">Aviso de privacidad</a></li>
+                <li><a href="#terminos-y-condiciones">Términos y condiciones</a></li>
+                <li><a href="#mapa-de-sitio">Mapa de sitio</a></li>
+            </ul>
+            <p>&copy; 2023 Dentavida. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <!-- Contenido de Aviso de privacidad -->
+    <div id="aviso-privacidad">
+        <h2>Aviso de privacidad</h2>
+        <p>Este sitio web utiliza cookies para mejorar su experiencia. Al continuar navegando, acepta nuestra política
+            de privacidad.</p>
+    </div>
+
+    <!-- Contenido de Términos y condiciones -->
+    <div id="terminos-y-condiciones">
+        <h2>Términos y condiciones</h2>
+        <p>Al utilizar este sitio web, acepta nuestros términos y condiciones.</p>
+    </div>
+
+    <!-- Contenido de Mapa de sitio -->
+    <div id="mapa-de-sitio">
+        <h2>Mapa de sitio</h2>
+        <ul>
+            <li><a href="#">Inicio</a></li>
+            <li><a href="#">Servicios</a></li>
+            <li><a href="#">Acerca de</a></li>
+            <li><a href="#">Contacto</a></li>
+        </ul>
+    </div>
+</body>
+
+
+
+</html>
+
+</body>
+
+</html>
