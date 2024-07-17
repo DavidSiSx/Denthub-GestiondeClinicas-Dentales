@@ -163,6 +163,7 @@ footer {
     color: #ffffff;
   }
   .citabtn{
+    display: block;
+    margin-left: 850px;
     margin-bottom: 300px;
   }
- 
