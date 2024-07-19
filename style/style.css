@@ -692,6 +692,7 @@ footer p {
   text-align: center;
   color: #000000;
   font-size: 300%;
+  background-color: #6e6485;
 }
 
 .patient-profile-header h1 {
@@ -775,4 +776,6 @@ footer p {
 .card-bodye strong {
   font-weight: bold;
 }
-
+.pacientes{
+  background-color: #6e6485;
+}
