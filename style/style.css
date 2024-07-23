@@ -409,7 +409,6 @@ input:focus {
 .img-radius {
   margin: auto;
   display: block;
-  
   border-radius: 5px;
   width: 200px;
   height: 200px;
@@ -499,7 +498,7 @@ h6 {
   transition: all 0.3s ease-in-out;
 }
 .nombre {
-  text-align: center;
+  text-align: center  ;
   color: #ffffff;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
@@ -777,7 +776,7 @@ footer p {
 }
 
 .pacientes{
-  background-color: #6e6485;
+  background-color: #e2d9d9;
 }
 .nombre{
  width: 120%;
