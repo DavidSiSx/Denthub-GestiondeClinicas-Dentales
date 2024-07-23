@@ -776,6 +776,10 @@ footer p {
 .card-bodye strong {
   font-weight: bold;
 }
+
 .pacientes{
   background-color: #6e6485;
+
+.nombre{
+ width: 120%;
 }
