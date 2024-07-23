@@ -1,3 +1,16 @@
+<?php 
+
+session_start();
+
+if(!isset($_SESSION['id'])){
+    header("Location: ../../index.php");
+}
+
+$nombre =  $_SESSION['nombre']." ".  $_SESSION['ap_paterno'] ." ". $_SESSION['ap_materno'];
+
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -56,8 +69,7 @@
                                                 alt="User-Profile-Image">
                                         </div>
                                         <div class="nombre">
-                                            <h6 class="f-w-600">Bienvenid@</h6>
-                                            <p>Juan Jose Perez </p>
+                                        <h1 class="fw-bold text-center p-4">Bienvenido <?= $nombre ?></h1>
                                             <i class=" mdi mdi-square-edit-outline feather icon-edit m-t-10 f-16"></i>
                                         </div>
                                     </div>

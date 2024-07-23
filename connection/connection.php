@@ -1,12 +1,13 @@
 <?php
-$host= "localhost";
-$username="root";
-$password="";
-$database="denthub";
+$dbhost= "localhost";
+$dbuser= "root";
+$dbpass= "";
+$dbname= "denthub";
 
-$conn= new mysqli($hostname, $username, $password,$database);
+$conn= new mysqli($dbhost, $dbuser, $dbpass, $dbname);
 
-if($conn->connect_error){
-    die("Connection failed:". $conn-> connect_error);
+if ($conexion ->connect_error){
+    die("la conexion fallo: ". $conexion->connect_error);
 }
+
 ?>

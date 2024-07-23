@@ -66,23 +66,15 @@
                     <!-- Iniciar Sesion -->
                     <div id="iniciar-sesion">
                         <h1>Iniciar Sesión</h1>
-                        <form action="../Vista_admin/index.html">
+                        < <form action="../connection/login_admin.php" method="post">
                             <div class="contenedor-input">
-                                <label>
-                                    Usuario <span class="req">*</span>
-                                </label>
-                                <input type="text" required>
-                            </div>
+                                <input type="text" name="correo" required placeholder="Correo">
+                                <input type="password" name="contrasena" required placeholder="Contraseña">
+                           </div>
+                           <p class="forgot"><a href="../registro_usr/index.html">Eres Cliente?</a></p>
+                            <button type="submit" class="button button-block">Iniciar sesion</button>
+                        </form>
 
-                            <div class="contenedor-input">
-                                <label>
-                                    Contraseña <span class="req">*</span>
-                                </label>
-                                <input type="password" required>
-                            </div>
-                            <p class="forgot"><a href="../registro_usr/index.html">Eres cliente?</a></p>
-
-                            <input type="submit" class="button button-block" value="Iniciar Sesión">
                         </form>
                     </div>
 

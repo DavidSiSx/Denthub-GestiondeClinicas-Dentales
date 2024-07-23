@@ -35,6 +35,7 @@
     </header>
     <section class="form">
         <div class="container">
+            <form action="../agendar/insert.php" method="post"></form>
             <h2>Agenda tu cita</h2>
             <p>Rellena el formulario para agendar tu cita.</p>
             <form action="../index.html">
@@ -46,14 +47,10 @@
                 <input type="tel" id="phone" required>
                 <label for="date">Fecha y hora preferida para la cita</label>
                 <input type="datetime-local" id="date" required>
-                <label for="service">Tipo de cita</label>
-                <select id="service">
-                    <option value="consulta">Consulta</option>
-                    <option value="limpieza">Limpieza y profilaxis</option>
-                    <option value="tratamiento">Tratamientos de caries y restauraciones</option>
-                    <option value="ortodoncia">Ortodoncia y tratamientos de alineación</option>
-                    <option value="cirugia">Cirugía oral y maxilofacial</option>
-                </select>
+                <label for="service">Motivo</label>
+                
+                    <textarea id="comments" rows="4"></textarea>
+                
                 <label for="comments">Comentarios o preguntas adicionales</label>
                 <textarea id="comments" rows="4"></textarea>
                 <button type="submit" class="cta">Agendar Cita</button>
