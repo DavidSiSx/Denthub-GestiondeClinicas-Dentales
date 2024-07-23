@@ -40,11 +40,40 @@ $conn->close();
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Perfil de Usuario</title>
-    <link rel="stylesheet" href="../style/style.css"> <!-- Asegúrate de enlazar correctamente tu archivo CSS -->
+    <link rel="preload" href="../style/style.css">
+    <link rel="preload" href="../style/normalize.css">
+    <link rel="stylesheet" href="../style/style.css">
+    <link rel="stylesheet" href="../style/normalize.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
 </head>
 <body>
 <header>
-    <!-- Aquí va tu código de header -->
+    <nav>
+        <div class="arriba">
+            <a class="navbar-brand" href="#">
+                <img src="../img/logo.png" width="100" height="50" alt="">
+            </a>
+            <div class="navbar_items">
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="./info/index.html">Informacion</a></li>
+                <li><a href="./administrar_cita/index.html">Citas</a></li>
+                <li><a href="./servicios/index.html">Servicios</a></li>
+                <div class="contenedor_icons">
+                    <a class="navbar-brand" href="../registro_usr/index.html">
+                        <img src="../img/usuario (1).png" alt="" width="30" height="24">
+                    </a>
+                    <a class="navbar-brand" href="https://www.google.com.mx/maps/preview">
+                        <img src="../img/marcador (2).png" alt="" width="30" height="24">
+                    </a>
+                    <a class="navbar-brand" href="#">
+                        <img src="../img/hogar (2).png" alt="" width="30" height="24">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
 </header>
 <div class="cardbody">
     <div class="page-content page-container" id="page-content">
@@ -101,7 +130,14 @@ $conn->close();
                                             <h6 class="text-muted f-w-400">Estudiante</h6>
                                         </div>
                                         <!-- Agrega más campos aquí si es necesario -->
+                                        <div class="col-sm-6">
+                                            <p class="m-b-10 f-w-600">Pendientes</p>
+                                            <h6 class="text-muted f-w-400">Cita 01/07/2024 8:00 am</h6>
+                                            <h6 class="text-muted f-w-400">Cita 01/07/2024 3:00 pm</h6>
+                                            <h6 class="text-muted f-w-400">Cita 01/07/2024 5:00 pm</h6>
+                                        </div>
                                     </div>
+                                    </a>
                                 </div>
                             </div>
                         </div>
@@ -111,5 +147,15 @@ $conn->close();
         </div>
     </div>
 </div>
+<footer>
+    <div class="footer-container">
+        <ul>
+            <li><a href="#aviso-privacidad">Aviso de privacidad</a></li>
+            <li><a href="#terminos-y-condiciones">Términos y condiciones</a></li>
+            <li><a href="#mapa-de-sitio">Mapa de sitio</a></li>
+        </ul>
+        <p>&copy; 2023 Dentavida. Todos los derechos reservados.</p>
+    </div>
+</footer>
 </body>
 </html>

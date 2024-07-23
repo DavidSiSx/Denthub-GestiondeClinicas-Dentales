@@ -270,7 +270,6 @@ label.active .req {
 label.highlight {
   color: #fff;
 }
-
 input {
   font-size: 22px;
   display: block;
@@ -279,11 +278,11 @@ input {
   padding: 5px 10px;
   background: none;
   background-image: none;
-  border: 1px solid #a0b3b0;
+  border: 1px solid #ffffff;
   border-top: none;
   border-left: none;
   border-right: none;
-  color: #fff;
+  color: #ffffff;
   border-radius: 0;
   transition: all 0.5s ease;
   border-radius: 5px;
@@ -294,7 +293,7 @@ input:focus {
 }
 
 .contenedor-input {
-  position: relative;
+  position: rela;
   margin-bottom: 40px;
 }
 
