@@ -22,7 +22,7 @@
         <link href="https://fonts.googleapis.com/css?family=Raleway|Ubuntu" rel="stylesheet">
 
         <!-- Estilos -->
-        <link rel="stylesheet" href="css/estilos.css">
+        <link rel="stylesheet" href="../style/">
 
         <title>Formulario Login y Registro de Usuarios</title>
     </head>
@@ -32,7 +32,7 @@
             <nav>
                 <div class="arriba">
                     <a class="navbar-brand" href="#">
-                        <img src="./img/logo.png" width="100" height="50" alt="">
+                        <img src="../img/logo.png" width="100" height="50" alt="">
                     </a>
                     <div class="navbar_items">
                         <li><a href="../index.html">Home</a></li>
@@ -68,83 +68,65 @@
                         <h1>Iniciar Sesión</h1>
                         <form action="../connection/login.php" method="post">
                             <div class="contenedor-input">
-
-                                <label for="correo"> Correo <span class="req">*</span>
-                                </label>
-                                <input type="text" required>
-                            </div>
-
-                            <div class="contenedor-input">
-                                <label for="contraseña"> Contraseña <span class="req">*</span>
-                                </label>
-                                <input type="password" required>
-                            </div>
+                                <input type="text" name="correo" required placeholder="Correo">
+                                <input type="password" name="contrasena" required placeholder="Contraseña">
+                           </div>
                             <p class="forgot"><a href="../registro_adm/index.html">Eres admin?</a></p>
-
-                            <input type="submit" class="button button-block" value="Iniciar Sesión">
+                            <button type="submit" class="button button-block">Iniciar sesion</button>
                         </form>
-                    </div>
 
+                        </div>
                     <!-- Registrarse -->
                     <div id="registrarse">
                         <h1>Registrarse</h1>
-                        <form action="../vista_cliente/index.html">
-                            <div class="contenedor-input">
-                                <label class="Nombre">
-                                    Nombre <span class="req">*</span>
-                                </label>
-                                <input type="text" required>
-                            </div>
-                            <div class="fila-arriba">
-                                <div class="contenedor-input">
-                                    <label for="apellido_paterno">
-                                        Apellido Paterno <span class="req">*</span>
-                                    </label>
-                                    <input type="text" required>
+                            <h2>Registro de Usuarios</h2>
+                            <form action="crear_usuario.php" method="POST" class="form-register">
+                                <div class="form-group">
+                                    <input type="name" name="nombre" required placeholder="Nombre">
                                 </div>
-                                <div class="contenedor-input">
-                                    <label>
-                                        Apellido Materno <span class="req">*</span>
-                                    </label>
-                                    <input type="text" required>
+                            
+                                <div class="form-group">
+                                    
+                                    <input type="text" name="apellido_materno" required placeholder="ApellidoPaterno">
+                                </div> 
+                            
+                                <div class="form-group">
+                                    
+                                    <input type="text" name="apellido_materno" required placeholder="Apellido Materno">
+
                                 </div>
+                            
+                                <div class="form-group">
+                                    
+                                    <input type="text" name="usuario" required placeholder="Usuario">
+
+                                </div>
+                            
+                                <div class="form-group">
+                                    
+                                    <input type="text" name="correo" required placeholder="Correo">
+                                </div>
+                            
+                                <div class="form-group">
                                 
-                            </div>
-                            <div class="contenedor-input">
-                                <label>
-                                    Usuario <span class="req">*</span>
-                                </label>
-                                <input type="text" required>
-                            </div>
-                            <div class="contenedor-input">
-                                <label>
-                                    Email <span class="req">*</span>
-                                </label>
-                                <input type="email" required>
-                            </div>
-                            <div class="contenedor-input">
-                                <label>
-                                    Telefono <span class="req">*</span>
-                                </label>
-                                <input type="password" required>
-                            </div>
-                            <div class="contenedor-input">
-                                <label>
-                                    Contraseña <span class="req">*</span>
-                                </label>
-                                <input type="password" required>
-                            </div>
-
-                            <div class="contenedor-input">
-                                <label>
-                                    Repetir Contraseña <span class="req">*</span>
-                                </label>
-                                <input type="password" required>
-                            </div>
-
-                            <input type="submit" class="button button-block" value="Registrarse">
-
-                        </form>
+                                    <input type="text" name="telefono" required placeholder="Teléfono">
+                                </div>
+                            
+                                <div class="form-group">
+                                    
+                                    <input type="text" name="contrasena" required placeholder="Contraseña">
+                                </div>
+                            
+                                <div class="form-group">
+                                        
+                                    <input type="date" id="fecha_nacimiento" name="fecha_nacimiento" required>
+                                </div>
+                            
+                                <div class="form-group">
+                                    <button type="submit">Registrar</button>
+                                </div>
+                            </form>
+                            
                     </div>
                 </div>
             </div>

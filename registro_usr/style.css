@@ -1,0 +1,153 @@
+body {
+    font-family: 'Raleway', sans-serif;
+    background: #f4f4f4;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background: #333;
+    color: #fff;
+    padding: 10px 0;
+}
+
+nav .arriba {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav .navbar_items ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+nav .navbar_items li {
+    margin: 0 15px;
+}
+
+nav .navbar_items a {
+    color: #fff;
+    text-decoration: none;
+}
+
+nav .contenedor_icons a {
+    margin: 0 5px;
+}
+
+.contenedor-formularios {
+    max-width: 600px;
+    margin: 50px auto;
+    background: #fff;
+    padding: 30px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.contenedor-tabs {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    border-bottom: 2px solid #ddd;
+}
+
+.contenedor-tabs .tab {
+    flex: 1;
+    text-align: center;
+}
+
+.contenedor-tabs .tab a {
+    display: block;
+    padding: 15px;
+    text-decoration: none;
+    color: #333;
+    border-bottom: 2px solid transparent;
+}
+
+.contenedor-tabs .tab.active a {
+    border-bottom: 2px solid #333;
+}
+
+.contenido-tab {
+    padding: 20px;
+}
+
+.contenedor-input {
+    margin-bottom: 20px;
+}
+
+.contenedor-input input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.button-block {
+    width: 100%;
+    padding: 10px;
+    background: #333;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.button-block:hover {
+    background: #555;
+}
+
+.forgot {
+    text-align: right;
+}
+
+.forgot a {
+    color: #333;
+    text-decoration: none;
+}
+
+.forgot a:hover {
+    text-decoration: underline;
+}
+
+footer {
+    background: #333;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+}
+
+footer ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+footer ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+footer ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+footer p {
+    margin: 10px 0 0;
+}
+
+.modal {
+    display: none;
+}
+
+.formulario-contenido {
+    display: none;
+}
+
+.formulario-contenido.active {
+    display: block;
+}
