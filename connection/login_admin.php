@@ -31,7 +31,7 @@ if (isset($_POST['correo']) && isset($_POST['contrasena'])) {
             $_SESSION['nombre'] = $row['nombre'];
             $_SESSION['apellido_paterno'] = $row['apellido_paterno'];
             $_SESSION['apellido_materno'] = $row['apellido_materno'];
-            header("Location: ../vista_admin/index.html");
+            header("Location: ../vista_admin/index.php");
             exit;
         } else if ($row['estado'] == 'Activo') {
             $_SESSION['error'] = "El usuario ya inició sesión";

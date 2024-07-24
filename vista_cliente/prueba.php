@@ -58,7 +58,7 @@ $conn->close();
             <div class="navbar_items">
                 <li><a href="../index.html">Home</a></li>
                 <li><a href="./info/index.html">Informacion</a></li>
-                <li><a href="./administrar_cita/index.html">Citas</a></li>
+                <li><a href="./administrar_cita/agendar/index.php">Citas</a></li>
                 <li><a href="./servicios/index.html">Servicios</a></li>
                 <div class="contenedor_icons">
                     <a class="navbar-brand" href="../registro_usr/index.html">

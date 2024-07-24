@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Administración de Citas</title>
+    <title>Agenda tu Cita</title>
     <link rel="stylesheet" href="./style.css">
 </head>
 <body>
@@ -37,25 +37,24 @@
         <div class="container">
             <h2>Agenda tu cita</h2>
             <p>Rellena el formulario para agendar tu cita.</p>
-            <form action="../index.html">
-                <label for="name">Nombre y apellido</label>
-                <input type="text" id="name" required>
-                <label for="email">Correo electrónico</label>
-                <input type="email" id="email" required>
-                <label for="phone">Teléfono</label>
-                <input type="tel" id="phone" required>
-                <label for="date">Fecha y hora preferida para la cita</label>
-                <input type="datetime-local" id="date" required>
-                <label for="service">Tipo de cita</label>
-                <select id="service">
-                    <option value="consulta">Consulta</option>
-                    <option value="limpieza">Limpieza y profilaxis</option>
-                    <option value="tratamiento">Tratamientos de caries y restauraciones</option>
-                    <option value="ortodoncia">Ortodoncia y tratamientos de alineación</option>
-                    <option value="cirugia">Cirugía oral y maxilofacial</option>
-                </select>
-                <label for="comments">Comentarios o preguntas adicionales</label>
-                <textarea id="comments" rows="4"></textarea>
+            <form action="./insertar_cita.php" method="post">
+
+                <label for="nombre">Nombre:</label>
+                <input type="text" name="nombre" id="nombre" required><br>
+
+                <label for="telefono">Teléfono:</label>
+                <input type="tel" name="telefono" id="telefono" required><br>
+
+                <label for="fecha_hora">Fecha y Hora:</label>
+                <input type="datetime-local" name="fecha_hora" id="fecha_hora" required><br>
+
+                <label for="motivo">Motivo:</label>
+                <input type="text" name="motivo" id="motivo" required><br>
+
+                <label for="comentarios">Comentarios:</label>
+                <input type="text" name="comentarios" id="comentarios"><br>
+                
+                <input type="hidden" name="id_paciente" value="<?= $_SESSION['id_paciente']; ?>"> <!-- Asumimos que el id_paciente está en la sesión -->
                 <button type="submit" class="cta">Agendar Cita</button>
             </form>
         </div>
@@ -70,7 +69,9 @@
                         <li><a href="#mapa-de-sitio">Mapa de sitio</a></li>
                     </ul>
                     <p>&copy; 2023 Dentavida. Todos los derechos reservados.</p>
-                    
                 </div>
             </footer>
+        </div>
+    </section>
 </body>
+</html>

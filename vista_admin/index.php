@@ -1,18 +1,41 @@
+<?php
+session_start();
+include('../connection/connection.php');
+
+
+$id_administrador = $_SESSION['id_administrador'];
+
+
+$stmt = $conn->prepare("SELECT nombre, apellido_paterno, apellido_materno, correo, telefono FROM administradores WHERE id_administrador = ?");
+$stmt->bind_param("i", $id_administrador);
+$stmt->execute();
+$result = $stmt->get_result();
+
+if ($result->num_rows > 0) {
+    $admin = $result->fetch_assoc();
+} else {
+    echo "No se encontraron datos del administrador.";
+    exit();
+}
+
+$stmt->close();
+$conn->close();
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Perfil del Administrador</title>
     <link rel="preload" href="../style/style.css">
     <link rel="preload" href="../style/normalize.css">
     <link rel="stylesheet" href="../style/style.css">
     <link rel="stylesheet" href="../style/normalize.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
 </head>
 
 <body>
@@ -24,7 +47,7 @@
                 </a>
                 <div class="navbar_items">
                     <li><a href="../index.html">Home</a></li>
-                    <li><a href="./calendario_admin/index.html">Agenda</a></li>
+                    <li><a href="./calendario_admin/index.php">Mis citas</a></li>
                     <li><a href="./Pacientes/index.html">Pacientes</a></li>
                     <li><a href="./control_de_pagos/index.html">Control de pagos</a></li>
                     <div class="contenedor_icons">
@@ -52,12 +75,11 @@
                                 <div class="col-sm-4 bg-c-lite-green user-profile">
                                     <div class="card-block text-center text-white">
                                         <div class="m-b-25">
-                                            <img src="../img/usuario (1).png" class="img-radius"
-                                                alt="User-Profile-Image">
+                                            <img src="../img/usuario (1).png" class="img-radius" alt="User-Profile-Image">
                                         </div>
                                         <div class="nombre">
                                             <h6 class="f-w-600">Bienvenid@</h6>
-                                            <p>Doctora Juanita Perez </p>
+                                            <p>Doctora <?= htmlspecialchars($admin['nombre']) . ' ' . htmlspecialchars($admin['apellido_paterno']) . ' ' . htmlspecialchars($admin['apellido_materno']); ?></p>
                                             <i class=" mdi mdi-square-edit-outline feather icon-edit m-t-10 f-16"></i>
                                         </div>
                                     </div>
@@ -67,15 +89,15 @@
                                         <h6 class="m-b-20 p-b-5 b-b-default f-w-600">Información</h6>
                                         <div class="row">
                                             <div class="col-sm-6">
-                                                <p class="m-b-10 f-w-600">Email</p>
-                                                <h6 class="text-muted f-w-400">Juanita@gmail.com</h6>
+                                                <p class="m-b-10 f-w-600">Correo</p>
+                                                <h6 class="text-muted f-w-400"><?= htmlspecialchars($admin['correo']) ?></h6>
                                             </div>
                                             <div class="col-sm-6">
-                                                <p class="m-b-10 f-w-600">Telefono</p>
-                                                <h6 class="text-muted f-w-400">98979989898</h6>
+                                                <p class="m-b-10 f-w-600">Teléfono</p>
+                                                <h6 class="text-muted f-w-400"><?= htmlspecialchars($admin['telefono']) ?></h6>
                                             </div>
                                         </div>
-                                        <h6 class="m-b-20 m-t-40 p-b-5 b-b-default f-w-600">Información</h6>
+                                        <h6 class="m-b-20 m-t-40 p-b-5 b-b-default f-w-600">Información Adicional</h6>
                                         <div class="row">
                                             <div class="col-sm-6">
                                                 <p class="m-b-10 f-w-600">Ocupación</p>
@@ -83,12 +105,12 @@
                                             </div>
                                             <div class="col-sm-6">
                                                 <p class="m-b-10 f-w-600">Pendientes</p>
+                                                <!-- Aquí puedes agregar lógica para mostrar citas pendientes -->
                                                 <h6 class="text-muted f-w-400">Cita 01//07/2024 8:00 am</h6>
                                                 <h6 class="text-muted f-w-400">Cita 01//07/2024 3:00 pm</h6>
                                                 <h6 class="text-muted f-w-400">Cita 01//07/2024 5:00 pm</h6>
                                             </div>
                                         </div>
-                                        </a>
                                     </div>
                                 </div>
                             </div>
@@ -112,8 +134,7 @@
     <!-- Contenido de Aviso de privacidad -->
     <div id="aviso-privacidad">
         <h2>Aviso de privacidad</h2>
-        <p>Este sitio web utiliza cookies para mejorar su experiencia. Al continuar navegando, acepta nuestra política
-            de privacidad.</p>
+        <p>Este sitio web utiliza cookies para mejorar su experiencia. Al continuar navegando, acepta nuestra política de privacidad.</p>
     </div>
 
     <!-- Contenido de Términos y condiciones -->
@@ -133,7 +154,5 @@
         </ul>
     </div>
 </body>
-
-
 
 </html>
