@@ -197,6 +197,7 @@ a:hover {
   margin: 40px auto;
   border-radius: 4px;
   box-shadow: 0 4px 10px 4px rgba(19, 35, 47, 0.3);
+  margin-bottom: 200px;
 }
 
 .contenedor-tabs {
@@ -269,7 +270,6 @@ label.active .req {
 label.highlight {
   color: #fff;
 }
-
 input {
   font-size: 22px;
   display: block;
@@ -278,11 +278,11 @@ input {
   padding: 5px 10px;
   background: none;
   background-image: none;
-  border: 1px solid #a0b3b0;
+  border: 1px solid #ffffff;
   border-top: none;
   border-left: none;
   border-right: none;
-  color: #fff;
+  color: #ffffff;
   border-radius: 0;
   transition: all 0.5s ease;
   border-radius: 5px;
@@ -293,7 +293,7 @@ input:focus {
 }
 
 .contenedor-input {
-  position: relative;
+  position: rela;
   margin-bottom: 40px;
 }
 
@@ -409,7 +409,6 @@ input:focus {
 .img-radius {
   margin: auto;
   display: block;
-  
   border-radius: 5px;
   width: 200px;
   height: 200px;
@@ -499,7 +498,7 @@ h6 {
   transition: all 0.3s ease-in-out;
 }
 .nombre {
-  text-align: center;
+  text-align: center  ;
   color: #ffffff;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
@@ -691,6 +690,7 @@ footer p {
   text-align: center;
   color: #000000;
   font-size: 300%;
+  background-color: #6e6485;
 }
 
 .patient-profile-header h1 {
@@ -739,4 +739,41 @@ footer p {
 
 .patient-profile-actions.btn {
   margin: 10px;
+}
+
+.card-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.card1 {
+  margin: 20px;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  width: 500px;
+  background-color: #ddd;
+  margin-bottom: 200px;
+  margin-top:  50px; ;
+}
+
+.card1 h2 {
+  margin-top: 0;
+}
+
+.card-bodye {
+  padding: 20px;
+}
+
+.card-bodye p {
+  margin-bottom: 10px;
+}
+
+.card-bodye strong {
+  font-weight: bold;
+}
+.nombre{
+ width: 120%;
 }
