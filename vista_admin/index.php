@@ -2,9 +2,7 @@
 session_start();
 include('../connection/connection.php');
 
-
 $id_administrador = $_SESSION['id_administrador'];
-
 
 $stmt = $conn->prepare("SELECT nombre, apellido_paterno, apellido_materno, correo, telefono FROM administradores WHERE id_administrador = ?");
 $stmt->bind_param("i", $id_administrador);
@@ -19,6 +17,26 @@ if ($result->num_rows > 0) {
 }
 
 $stmt->close();
+
+// Obtener citas pendientes con nombre de paciente
+$citas_stmt = $conn->prepare(" SELECT c.fecha_hora, c.motivo, p.nombre AS paciente_nombre, p.apellido_paterno AS paciente_apellido
+    FROM citas c
+    JOIN pacientes p ON c.id_paciente = p.id_paciente
+    WHERE c.estado = 'Pendiente'
+    ORDER BY c.fecha_hora
+   
+");
+$citas_stmt->execute();
+$citas_result = $citas_stmt->get_result();
+
+$citas = [];
+if ($citas_result->num_rows > 0) {
+    while ($row = $citas_result->fetch_assoc()) {
+        $citas[] = $row;
+    }
+}
+
+$citas_stmt->close();
 $conn->close();
 ?>
 
@@ -48,8 +66,8 @@ $conn->close();
                 <div class="navbar_items">
                     <li><a href="../index.html">Home</a></li>
                     <li><a href="./calendario_admin/index.php">Mis citas</a></li>
-                    <li><a href="./Pacientes/index.html">Pacientes</a></li>
-                    <li><a href="./control_de_pagos/index.html">Control de pagos</a></li>
+                    <li><a href="./Pacientes/index.php">Pacientes</a></li>
+                    <li><a href="./control_de_pagos/index.php">Control de pagos</a></li>
                     <div class="contenedor_icons">
                         <a class="navbar-brand" href="../registro/index.html">
                             <img src="../img/usuario (1).png" alt="" width="30" height="24">
@@ -105,10 +123,11 @@ $conn->close();
                                             </div>
                                             <div class="col-sm-6">
                                                 <p class="m-b-10 f-w-600">Pendientes</p>
-                                                <!-- Aquí puedes agregar lógica para mostrar citas pendientes -->
-                                                <h6 class="text-muted f-w-400">Cita 01//07/2024 8:00 am</h6>
-                                                <h6 class="text-muted f-w-400">Cita 01//07/2024 3:00 pm</h6>
-                                                <h6 class="text-muted f-w-400">Cita 01//07/2024 5:00 pm</h6>
+                                                <?php foreach ($citas as $cita): ?>
+                                                    <h6 class="text-muted f-w-400">
+                                                        <?= htmlspecialchars($cita['paciente_nombre']) . ' ' . htmlspecialchars($cita['paciente_apellido']) ?> - Cita <?= date('d/m/Y H:i', strtotime($cita['fecha_hora'])) . ' - ' . htmlspecialchars($cita['motivo']); ?>
+                                                    </h6>
+                                                <?php endforeach; ?>
                                             </div>
                                         </div>
                                     </div>

@@ -36,13 +36,13 @@ if (isset($_POST['correo']) && isset($_POST['contrasena'])) {
             exit;
         } else if ($row['estado'] == 'Activo') {
             $_SESSION['error'] = "El usuario ya inició sesión";
-            header("Location: ./registro_usr/index.html");
+            header("Location: ../registro_usr/index.html");
             exit;
         }
     } else {
         echo "No se encontraron usuarios con esas credenciales<br>";
         $_SESSION['error'] = "El usuario o contraseña son incorrectos";
-        header("Location: ../index.html");
+        header("Location: ../registro_usr/index.html");
         exit;
     }
 }

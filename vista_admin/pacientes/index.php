@@ -1,5 +1,14 @@
-<!DOCTYPE html>
+<?php
+session_start();
+include('../../connection/connection.php');
 
+// Consulta para obtener todos los pacientes
+$sql = "SELECT id_paciente, nombre, apellido_paterno, apellido_materno, fecha_nacimiento, telefono, correo FROM pacientes";
+$result = $conn->query($sql);
+?>
+
+<!DOCTYPE html>
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,8 +19,7 @@
     <link rel="stylesheet" href="../../style/normalize.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
 </head>
 
 <body class="pacientes">
@@ -22,10 +30,10 @@
                     <img src="../../img/logo.png" width="100" height="50" alt="">
                 </a>
                 <div class="navbar_items">
-                    <li><a href="../index.html">Home</a></li>
-                    <li><a href="../calendario_admin/index.html">Mis citas</a></li>
+                    <li><a href="../index.php">Home</a></li>
+                    <li><a href="../../vista_admin/calendario_admin/index.php">Mis citas</a></li>
                     <li><a href="#">Pacientes</a></li>
-                    <li><a href="../control_de_pagos/index.html">Control de pagos</a></li>
+                    <li><a href="../control_de_pagos/index.php">Control de pagos</a></li>
                     <div class="contenedor_icons">
                         <a class="navbar-brand" href="../registro/index.html">
                             <img src="../../img/usuario (1).png" alt="" width="30" height="24">
@@ -42,14 +50,13 @@
         </nav>
     </header>
     <div class="container">
-
         <h2 class="h2pac">Pacientes</h2>
         <table class="patients-table">
             <thead>
                 <tr>
                     <th>Nombre</th>
-                    <th>Apellido</th>
-                    <th>Edad</th>
+                    <th>Apellido Paterno</th>
+                    <th>Apellido Materno</th>
                     <th>Fecha de nacimiento</th>
                     <th>Teléfono</th>
                     <th>Email</th>
@@ -57,34 +64,27 @@
                 </tr>
             </thead>
             <tbody>
-                <!-- lista de pacientes -->
-                <tr>
-                    <td>John</td>
-                    <td>Doe</td>
-                    <td>30</td>
-                    <td>1990-01-01</td>
-                    <td>555-1234</td>
-                    <td>johndoe@example.com</td>
-                    <td>
-                        <a href="../Pacientes/perfil_pac/index.html" class="btn-primary">Ver perfil</a>
-                        <a href="#" class="btn btn-secondary">Editar</a>
-                        <a href="#" class="btn btn-danger">Eliminar</a>
-                    </td>
-                </tr>
-                <tr>
-                    <td>Jane</td>
-                    <td>Doe</td>
-                    <td>25</td>
-                    <td>1995-06-15</td>
-                    <td>555-5678</td>
-                    <td>janedoe@example.com</td>
-                    <td>
-                        <a href="#" class="btn btn-primary">Ver perfil</a>
-                        <a href="#" class="btn btn-secondary">Editar</a>
-                        <a href="#" class="btn btn-danger">Eliminar</a>
-                    </td>
-                </tr>
-                <!-- ... -->
+                <?php if ($result->num_rows > 0): ?>
+                    <?php while($row = $result->fetch_assoc()): ?>
+                    <tr>
+                        <td><?= htmlspecialchars($row['nombre']) ?></td>
+                        <td><?= htmlspecialchars($row['apellido_paterno']) ?></td>
+                        <td><?= htmlspecialchars($row['apellido_materno']) ?></td>
+                        <td><?= htmlspecialchars($row['fecha_nacimiento']) ?></td>
+                        <td><?= htmlspecialchars($row['telefono']) ?></td>
+                        <td><?= htmlspecialchars($row['correo']) ?></td>
+                        <td>
+                            <a href="../Pacientes/perfil_pac/index.php?id_paciente=<?= $row['id_paciente'] ?>" class="btn btn-primary">Ver perfil</a>
+                         
+                            <a href="eliminar_paciente.php?id_paciente=<?= $row['id_paciente'] ?>" class="btn btn-danger">Eliminar</a>
+                        </td>
+                    </tr>
+                    <?php endwhile; ?>
+                <?php else: ?>
+                    <tr>
+                        <td colspan="7">No se encontraron pacientes.</td>
+                    </tr>
+                <?php endif; ?>
             </tbody>
         </table>
         <div class="pagination">
@@ -112,8 +112,7 @@
     <div id="aviso-privacidad">
         <h2>Aviso de privacidad</h2>
         <p>Este sitio web utiliza cookies para mejorar su experiencia. Al continuar navegando, acepta nuestra
-            política
-            de privacidad.</p>
+            política de privacidad.</p>
     </div>
 
     <!-- Contenido de Términos y condiciones -->
@@ -135,3 +134,7 @@
 </body>
 
 </html>
+
+<?php
+$conn->close();
+?>

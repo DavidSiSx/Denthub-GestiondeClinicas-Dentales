@@ -23,7 +23,7 @@ $stmt = $conn->prepare("CALL CrearUsuario(?, ?, ?, ?, ?, ?, ?, ?)");
 $stmt->bind_param("ssssssss", $nombre, $apellido_paterno, $apellido_materno, $usuario, $correo, $telefono, $contrasena, $fecha_nacimiento);
 
 if ($stmt->execute()) {
-    header("Location: ../vista_cliente/index.html");
+    header("Location: ./index.html");
     exit();
 } else {
     echo "Error: " . $stmt->error;

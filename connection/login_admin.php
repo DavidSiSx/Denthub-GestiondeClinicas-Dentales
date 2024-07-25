@@ -35,7 +35,7 @@ if (isset($_POST['correo']) && isset($_POST['contrasena'])) {
             exit;
         } else if ($row['estado'] == 'Activo') {
             $_SESSION['error'] = "El usuario ya inició sesión";
-            header("Location: ../registro_admin/index.html");
+            header("Location: ../registro_adm/index.html");
             exit;
         }
     } //else {

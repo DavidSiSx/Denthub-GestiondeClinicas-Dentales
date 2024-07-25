@@ -18,6 +18,7 @@ if ($conn->connect_error) {
 
 $user_id = $_SESSION['id_paciente'];
 
+// Obtener datos del usuario
 $stmt = $conn->prepare("SELECT nombre, apellido_paterno, apellido_materno, usuario, correo, telefono, fecha_nacimiento FROM pacientes WHERE id_paciente = ?");
 $stmt->bind_param("i", $user_id);
 $stmt->execute();
@@ -31,6 +32,21 @@ if ($result->num_rows > 0) {
 }
 
 $stmt->close();
+
+// Obtener citas del usuario
+$citas_stmt = $conn->prepare("SELECT fecha_hora, motivo FROM citas WHERE id_paciente = ?");
+$citas_stmt->bind_param("i", $user_id);
+$citas_stmt->execute();
+$citas_result = $citas_stmt->get_result();
+
+$citas = [];
+if ($citas_result->num_rows > 0) {
+    while ($row = $citas_result->fetch_assoc()) {
+        $citas[] = $row;
+    }
+}
+
+$citas_stmt->close();
 $conn->close();
 ?>
 
@@ -123,21 +139,21 @@ $conn->close();
                                             <h6 class="text-muted f-w-400"><?php echo htmlspecialchars($user['fecha_nacimiento']); ?></h6>
                                         </div>
                                     </div>
-                                    <h6 class="m-b-20 m-t-40 p-b-5 b-b-default f-w-600">Información</h6>
+                                    <h6 class="m-b-20 m-t-40 p-b-5 b-b-default f-w-600">Citas</h6>
                                     <div class="row">
-                                        <div class="col-sm-6">
-                                            <p class="m-b-10 f-w-600">Ocupación</p>
-                                            <h6 class="text-muted f-w-400">Estudiante</h6>
-                                        </div>
-                                        <!-- Agrega más campos aquí si es necesario -->
-                                        <div class="col-sm-6">
-                                            <p class="m-b-10 f-w-600">Pendientes</p>
-                                            <h6 class="text-muted f-w-400">Cita 01/07/2024 8:00 am</h6>
-                                            <h6 class="text-muted f-w-400">Cita 01/07/2024 3:00 pm</h6>
-                                            <h6 class="text-muted f-w-400">Cita 01/07/2024 5:00 pm</h6>
-                                        </div>
+                                        <?php if (!empty($citas)): ?>
+                                            <?php foreach ($citas as $cita): ?>
+                                                <div class="col-sm-6">
+                                                    <p class="m-b-10 f-w-600">Cita</p>
+                                                    <h6 class="text-muted f-w-400"><?php echo date('d/m/Y H:i', strtotime($cita['fecha_hora'])) . ' - ' . htmlspecialchars($cita['motivo']); ?></h6>
+                                                </div>
+                                            <?php endforeach; ?>
+                                        <?php else: ?>
+                                            <div class="col-sm-12">
+                                                <h6 class="text-muted f-w-400">No tienes citas agendadas.</h6>
+                                            </div>
+                                        <?php endif; ?>
                                     </div>
-                                    </a>
                                 </div>
                             </div>
                         </div>
