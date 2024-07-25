@@ -1,143 +1,124 @@
 body {
-    font-family: "Open Sans", sans-serif;
-    background-color: rgb(209, 184, 241);
-  }
-.catalogo {
-    background-color:rgb(209, 184, 241);
-    padding: 20px;
+  font-family: "Open Sans", sans-serif;
+  background-color: rgb(209, 184, 241);
+}
+
+.arriba {
+  list-style-type: none;
+  margin: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0;
+  background-color: #5d4d81;
+}
+
+.navbar_items {
+  display: flex;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar_items li {
+  margin: 0 15px;
+}
+
+.navbar_items a {
+  display: block;
+  color: #ffffff;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+.navbar_items a:hover {
+  background-color: #333;
+}
+
+.contenedor_icons {
+  display: flex;
+  align-items: center;
+}
+
+.contenedor_icons a {
+  margin-left: 15px;
+}
+
+.catalogo .container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #e0d4f7;
+  border-radius: 10px;
 }
 
 .servicios-list {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
 }
 
 .servicios-list li {
-    margin: 20px;
-    width: calc(33.33% - 20px);
-    background-color: #fff;
-    padding: 20px;
-    border: 1px solid #ddd;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+  padding: 20px;
+  margin: 10px;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  width: 30%;
+  text-align: center;
+  position: relative; /* To contain the absolute positioning of the details */
 }
 
 .servicios-list img {
-    width: 50px;
-    height: 50px;
-    margin-right: 10px;
-}
-
-.servicios-list h2 {
-    margin-top: 0;
-}
-
-.servicios-list p {
-    font-size: 18px;
-    margin-bottom: 20px;
+  max-width: 50px;
+  margin-bottom: 20px;
 }
 
 .btn-ver-mas {
-    background-color: #5d4d81;
-    color: #fff;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
+  background-color: #5d4d81;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 5px;
 }
 
 .btn-ver-mas:hover {
-    background-color: #5d4d81;
+  background-color: #333;
 }
-footer {
-    background-color: #5d4d81;
-    padding: 20px;
-    text-align: center;
-    clear: both;
-  }
-  
-  .footer-container {
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 20px;
-  }
-  
-  footer ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    justify-content: space-between;
-  }
-  
-  footer li {
-    margin-right: 20px;
-  }
-  
-  footer a {
-    text-decoration: none;
-    color: #fdfdfd;
-  }
-  
-  a:hover {
-    color: #ffffff;
-  }
-  
-  footer p {
-    font-size: 14px;
-    color: #ffffff;
-  }
-  
-  #aviso-privacidad, #terminos-y-condiciones, #mapa-de-sitio {
-    display: none;
-  }
-  
-  #aviso-privacidad:target, #terminos-y-condiciones:target, #mapa-de-sitio:target {
-    display: block;
-    position: absolute;
-  
-    left: 50%;
-    top:150%;
-    transform: translate(-50%, -50%);
-    background-color: #6e6485;
-    opacity: 80%;
-    padding: 20px;
-    border: 1px solid #ddd;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-  }
-  .arriba {
-    list-style-type: none;
-    margin: 0;
-    display: block;
-    padding: 0;
-    overflow: hidden;
-    background-color: #5d4d81;
-  }
-  .contenedor_icons {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-gap: -20000px;
-    margin-left: 1000px;
-  }
-  .navbar_items {
-    margin-top: 16px;
-  }
-  
-  .titulo_centrado {
-    text-align: center;
-  }
-  .arriba a {
-    float: left;
-  }
-  
-  .arriba a {
-    display: block;
-    color: #ffffff;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-  }
+
+/* Detalles */
+.detalles {
+  display: none;
+  margin-top: 20px;
+  text-align: left;
+  border-top: 1px solid #ddd;
+  padding-top: 10px;
+  position: absolute;
+  width: 100%;
+  left: 0;
+  top: 100%;
+  z-index: 1;
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+}
+
+/* Precio */
+.precio {
+  color: #5d4d81;
+  font-weight: bold;
+  background-color: #f0e5ff;
+  padding: 5px 10px;
+  border-radius: 5px;
+  display: inline-block;
+  margin-top: 10px;
+}
+h1{
+  text-align: center;
+  font-size: 40px;
+}

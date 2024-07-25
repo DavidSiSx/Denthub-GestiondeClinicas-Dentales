@@ -29,20 +29,20 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Registrar Pago</title>
-    <link rel="stylesheet" href="../../vista_cliente/administrar_cita/style.css">
+    <link rel="stylesheet" href="./registrarpago.css">
 </head>
 <body>
     <header>
-        <nav>
+    <nav>
             <div class="arriba">
                 <a class="navbar-brand" href="#">
                     <img src="../../img/logo.png" width="100" height="50" alt="">
                 </a>
                 <div class="navbar_items">
-                    <li><a href="../../prueba.php">Home</a></li>
-                    <li><a href="../../info/index.html">Informacion</a></li>
-                    <li><a href="#">Citas</a></li>
-                    <li><a href="../../servicios/index.html">Servicios</a></li>
+                    <li><a href="../index.php">Home</a></li>
+                    <li><a href="../calendario_admin/index.php">Mis Citas</a></li>
+                    <li><a href="../pacientes/index.php">Pacientes</a></li>
+                    <li><a href="../control_de_pagos/index.php">Control de pagos</a></li>
                     <div class="contenedor_icons">
                         <a class="navbar-brand" href="../registro/index.html">
                             <img src="../../img/usuario (1).png" alt="" width="30" height="24">

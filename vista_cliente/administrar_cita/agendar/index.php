@@ -24,14 +24,14 @@ $result = $stmt->get_result();
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Administración de Citas</title>
-    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="../style.css">
 </head>
 <body>
     <header>
         <nav>
             <div class="arriba">
                 <a class="navbar-brand" href="#">
-                    <img src="../../img/logo.png" width="100" height="50" alt="">
+                    <img src="../../../img/logo.png" width="100" height="50" alt="">
                 </a>
                 <div class="navbar_items">
                     <li><a href="../../prueba.php">Home</a></li>
@@ -39,14 +39,14 @@ $result = $stmt->get_result();
                     <li><a href="#">Citas</a></li>
                     <li><a href="../../servicios/index.html">Servicios</a></li>
                     <div class="contenedor_icons">
-                        <a class="navbar-brand" href="../registro/index.html">
-                            <img src="../../img/usuario (1).png" alt="" width="30" height="24">
+                        <a class="navbar-brand" href="../../../registro_usr/index.html">
+                            <img src="../../../img/usuario (1).png" alt="" width="30" height="24">
                         </a>
                         <a class="navbar-brand" href="https://www.google.com.mx/maps/preview">
-                            <img src="../../img/marcador (2).png" alt="" width="30" height="24">
+                            <img src="../../../img/marcador (2).png" alt="" width="30" height="24">
                         </a>
                         <a class="navbar-brand" href="#">
-                            <img src="../../img/hogar (2).png" alt="" width="30" height="24">
+                            <img src="../../../img/hogar (2).png" alt="" width="30" height="24">
                         </a>
                     </div>
                 </div>

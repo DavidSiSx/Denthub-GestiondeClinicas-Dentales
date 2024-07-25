@@ -29,9 +29,9 @@ $result = $conn->query($sql);
                 </a>
                 <div class="navbar_items">
                     <li><a href="../index.php">Home</a></li>
-                    <li><a href="../../info/index.html">Mis Citas</a></li>
+                    <li><a href="../calendario_admin/index.php">Mis Citas</a></li>
                     <li><a href="../pacientes/index.php">Pacientes</a></li>
-                    <li><a href="../../servicios/index.html">Control de pagos</a></li>
+                    <li><a href="../control_de_pagos/index.php">Control de pagos</a></li>
                     <div class="contenedor_icons">
                         <a class="navbar-brand" href="../registro/index.html">
                             <img src="../../img/usuario (1).png" alt="" width="30" height="24">
@@ -52,7 +52,7 @@ $result = $conn->query($sql);
     </div>
     <main>
         <section class="appointment-list">
-            <h2>Todas las Citas</h2>
+            <h2>Pagos</h2>
             <table>
                 <thead>
                     <tr>

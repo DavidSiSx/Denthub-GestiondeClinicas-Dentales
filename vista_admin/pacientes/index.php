@@ -15,7 +15,7 @@ $result = $conn->query($sql);
     <title>Document</title>
     <link rel="preload" href="../../style/style.css">
     <link rel="preload" href="../../style/normalize.css">
-    <link rel="stylesheet" href="../../style/style.css">
+    <link rel="stylesheet" href="../../vista_cliente/administrar_cita/style.css">
     <link rel="stylesheet" href="../../style/normalize.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -107,30 +107,6 @@ $result = $conn->query($sql);
             <p>&copy; 2023 Dentavida. Todos los derechos reservados.</p>
         </div>
     </footer>
-
-    <!-- Contenido de Aviso de privacidad -->
-    <div id="aviso-privacidad">
-        <h2>Aviso de privacidad</h2>
-        <p>Este sitio web utiliza cookies para mejorar su experiencia. Al continuar navegando, acepta nuestra
-            política de privacidad.</p>
-    </div>
-
-    <!-- Contenido de Términos y condiciones -->
-    <div id="terminos-y-condiciones">
-        <h2>Términos y condiciones</h2>
-        <p>Al utilizar este sitio web, acepta nuestros términos y condiciones.</p>
-    </div>
-
-    <!-- Contenido de Mapa de sitio -->
-    <div id="mapa-de-sitio">
-        <h2>Mapa de sitio</h2>
-        <ul>
-            <li><a href="#">Inicio</a></li>
-            <li><a href="#">Servicios</a></li>
-            <li><a href="#">Acerca de</a></li>
-            <li><a href="#">Contacto</a></li>
-        </ul>
-    </div>
 </body>
 
 </html>

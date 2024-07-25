@@ -1,0 +1,173 @@
+/* styles.css */
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: rgb(207, 181, 241);
+    margin: 20px;
+  }
+  
+  .xd {
+      margin-top: 30px;
+    background-color: #5d4d81;
+    padding: 20px;
+    text-align: center;
+    color: #fff;
+  }
+  
+  main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+  }
+  
+  .appointment-list {
+    margin-bottom: 20px;
+  }
+  
+  table {
+    border-collapse: collapse;
+    width: 100%;
+  }
+  
+  th,
+  td {
+    border: 1px solid #030303;
+    padding: 10px;
+    text-align: left;
+  }
+  
+  th {
+    background-color: #5d4d81;
+  }
+  
+  .cancel-btn,
+  .reschedule-btn {
+    padding: 0;
+    background-color: #5d4d81;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 100px;
+  }
+  
+  .cancel-btn:hover,
+  .reschedule-btn:hover {
+    background-color: #150e25;
+  }
+  
+  .appointment-details {
+    margin-top: 20px;
+  }
+  
+  form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 400px;
+  }
+  
+  label {
+    margin-bottom: 10px;
+  }
+  
+  input,
+  textarea {
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+  }
+  
+  button[type="submit"] {
+    background-color: #4caf50;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+  }
+  
+  button[type="submit"]:hover {
+    background-color: #3e8e41;
+  }
+  .arriba {
+    list-style-type: none;
+    margin: 0;
+    display: block;
+    padding: 0;
+    overflow: hidden;
+    background-color: #5d4d81;
+  }
+  .contenedor_icons {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: -2000px;
+    margin-left: 1000px;
+  }
+  .navbar_items {
+    margin-top: 16px;
+  }
+  
+  .titulo_centrado {
+    text-align: center;
+  }
+  .arriba a {
+    float: left;
+  }
+  
+  .arriba a {
+    display: block;
+    color: #ffffff;
+    text-align: center;
+    padding: 10px 16px;
+    text-decoration: none;
+  }
+  footer {
+      background-color: #5d4d81;
+      padding: 20px;
+      text-align: center;
+    }
+    
+    .footer-container {
+      
+      margin: 0 auto;
+      padding: 20px;
+    }
+    .bg_footer{
+      background-color: #5d4d81;
+    }
+    ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: space-between;
+    }
+    
+    li {
+      margin-right: 20px;
+    }
+    
+    a {
+      text-decoration: none;
+      color: #fdfdfd;
+    }
+    
+    a:hover {
+      color: #ffffff;
+    }
+    
+    footer p {
+      font-size: 14px;
+      color: #ffffff;
+    }
+    .citabtn{
+      display: block;
+      margin-left: 850px;
+      margin-bottom: 300px;
+      margin-left:850px ;
+  
+    }
+  

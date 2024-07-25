@@ -30,9 +30,10 @@ $result = $conn->query($sql);
                 </a>
                 <div class="navbar_items">
                     <li><a href="../index.php">Home</a></li>
+                    <li><a href="#">Mis citas</a></li>
                     <li><a href="../pacientes/index.php">Pacientes</a></li>
                     <li><a href="../control_de_pagos/index.php">Control de pagos</a></li>
-                   
+        
                     <div class="contenedor_icons">
                         <a class="navbar-brand" href="../registro/index.html">
                             <img src="../../img/usuario (1).png" alt="" width="30" height="24">
