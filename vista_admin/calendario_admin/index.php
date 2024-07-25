@@ -3,7 +3,7 @@ session_start();
 include('../../connection/connection.php');
 
 // Consulta para obtener todas las citas junto con la información de los pacientes
-$sql = "SELECT pacientes.nombre, pacientes.telefono, citas.fecha_hora, citas.motivo, citas.comentarios
+$sql = "SELECT citas.id_cita, pacientes.nombre, pacientes.telefono, citas.fecha_hora, citas.motivo, citas.comentarios
     FROM citas
     INNER JOIN pacientes ON citas.id_paciente = pacientes.id_paciente
     ORDER BY citas.fecha_hora ASC";
@@ -64,6 +64,7 @@ $result = $conn->query($sql);
                         <th>Hora</th>
                         <th>Motivo</th>
                         <th>Comentarios</th>
+                        <th>Acciones</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -77,6 +78,12 @@ $result = $conn->query($sql);
                         <td><?= $fecha_hora->format('H:i') ?></td>
                         <td><?= htmlspecialchars($row['motivo']) ?></td>
                         <td><?= htmlspecialchars($row['comentarios']) ?></td>
+                        <td>
+                            <form action="cancelar_cita.php" method="post" style="display:inline;">
+                                <input type="hidden" name="id_cita" value="<?= $row['id_cita'] ?>">
+                                <button type="submit" class="btn btn-danger">Cancelar</button>
+                            </form>
+                        </td>
                     </tr>
                     <?php endwhile; ?>
                 </tbody>

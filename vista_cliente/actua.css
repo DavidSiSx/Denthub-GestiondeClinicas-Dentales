@@ -1,0 +1,121 @@
+body {
+    font-family: "Open Sans", sans-serif;
+    background-color: rgb(209, 184, 241);
+}
+
+.arriba {
+    list-style-type: none;
+    margin: 0;
+    display: block;
+    padding: 0;
+    overflow: hidden;
+    background-color: #5d4d81;
+  }
+  .contenedor_icons {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: -20000px;
+    margin-left: 1000px;
+  }
+  .navbar_items {
+    margin-top: 16px;
+  }
+  
+  .titulo_centrado {
+    text-align: center;
+  }
+  .arriba a {
+    float: left;
+  }
+  
+  .arriba a {
+    display: block;
+    color: #ffffff;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+  }
+
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.update-profile-card {
+    background-color: #ffffff;
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+
+.update-profile-card h2 {
+    text-align: center;
+    color: #5d4d81;
+    margin-bottom: 20px;
+}
+
+.update-profile-card .form-group {
+    margin-bottom: 15px;
+}
+
+.update-profile-card label {
+    display: block;
+    font-weight: bold;
+    color: #5d4d81;
+}
+
+.update-profile-card input {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.update-profile-card .btn-primary {
+    width: 100%;
+    background-color: #5d4d81;
+    color: #fff;
+    border: none;
+    padding: 10px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-top: 20px;
+}
+
+.update-profile-card .btn-primary:hover {
+    background-color: #150e25;
+}
+
+footer {
+    background-color: #5d4d81;
+    color: #ffffff;
+    padding: 20px 0;
+    text-align: center;
+}
+
+footer .footer-container ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+}
+
+footer .footer-container ul li {
+    margin: 0 15px;
+}
+
+footer .footer-container ul a {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+footer .footer-container ul a:hover {
+    text-decoration: underline;
+}

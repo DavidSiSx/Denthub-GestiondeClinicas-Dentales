@@ -151,7 +151,7 @@ footer {
   
   a {
     text-decoration: none;
-    color: #fdfdfd;
+    color: #ffffff;
   }
   
   a:hover {
@@ -194,4 +194,11 @@ footer {
   
   .pagination a:hover {
     color: #23527c;
+  }
+  .eliminar{
+    color: red;
+  
+  }
+  .verperfil{
+    color: #3e8e41;
   }

@@ -18,7 +18,7 @@ $result = $conn->query($sql);
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Administración Pagos</title>
-    <link rel="stylesheet" href="../../vista_cliente/administrar_cita/style.css">
+    <link rel="stylesheet" href="./registrarpago.css">
 </head>
 <body>
     <header>
@@ -79,7 +79,7 @@ $result = $conn->query($sql);
                         <td><?= htmlspecialchars($row['monto_total']) ?></td>
                         <td><?= htmlspecialchars($row['estado_pago']) ?></td>
                         <td>
-                            <a href="registrar_pago.php?id_cita=<?= $row['id_cita'] ?>" class="btn-primary">Registrar Pago</a>
+                            <a class="registrarpagobtn" href="registrar_pago.php?id_cita=<?= $row['id_cita'] ?>" class="btn-primary">Registrar Pago</a>
                         </td>
                     </tr>
                     <?php endwhile; ?>

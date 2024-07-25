@@ -74,9 +74,9 @@ $result = $conn->query($sql);
                         <td><?= htmlspecialchars($row['telefono']) ?></td>
                         <td><?= htmlspecialchars($row['correo']) ?></td>
                         <td>
-                            <a href="../Pacientes/perfil_pac/index.php?id_paciente=<?= $row['id_paciente'] ?>" class="btn btn-primary">Ver perfil</a>
+                            <a href="../Pacientes/perfil_pac/index.php?id_paciente=<?= $row['id_paciente'] ?>" class="verperfil">Ver perfil</a>
                          
-                            <a href="eliminar_paciente.php?id_paciente=<?= $row['id_paciente'] ?>" class="btn btn-danger">Eliminar</a>
+                            <a href="eliminar_paciente.php?id_paciente=<?= $row['id_paciente'] ?>" class="eliminar">Eliminar</a>
                         </td>
                     </tr>
                     <?php endwhile; ?>

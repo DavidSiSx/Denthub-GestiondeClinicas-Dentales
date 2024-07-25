@@ -61,12 +61,12 @@ $conn->close();
                     <img src="../img/logo.png" width="100" height="50" alt="">
                 </a>
                 <div class="navbar_items">
-                    <li><a href="./index.php">Home</a></li>
+                    <li><a href="../index.html">Home</a></li>
                     <li><a href="./calendario_admin/index.php">Mis citas</a></li>
                     <li><a href="./pacientes/index.php">Pacientes</a></li>
                     <li><a href="./control_de_pagos/index.php">Control de pagos</a></li>
                     <div class="contenedor_icons">
-                        <a class="navbar-brand" href="#">
+                        <a class="navbar-brand" href="../registro_usr/index.html">
                             <img src="../img/usuario (1).png" alt="" width="30" height="24">
                         </a>
                         <a class="navbar-brand" href="https://www.google.com.mx/maps/preview">

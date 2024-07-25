@@ -72,10 +72,10 @@ $conn->close();
                 <div class="navbar_items">
                     <li><a href="#">Home</a></li>
                     <li><a href="./info/index.html">Informacion</a></li>
-                    <li><a href="../administrar_cita/agendar/index.php">Citas</a></li>
+                    <li><a href="../vista_cliente/administrar_cita/agendar/index.php">Citas</a></li>
                     <li><a href="./servicios/index.html">Servicios</a></li>
                     <div class="contenedor_icons">
-                        <a class="navbar-brand" href="../../registro_usr/index.html">
+                        <a class="navbar-brand" href="../registro_usr/index.html">
                             <img src="../img/usuario (1).png" alt="" width="30" height="24">
                         </a>
                         <a class="navbar-brand" href="https://www.google.com.mx/maps/preview">
@@ -124,6 +124,9 @@ $conn->close();
                         <span><?= date('d/m/Y H:i', strtotime($cita['fecha_hora'])) . ' - ' . htmlspecialchars($cita['motivo']); ?></span>
                     </div>
                 <?php endforeach; ?>
+                <div class="update-profile">
+                <a href="actualizar_perfil.php" class="btn-primary">Actualizar Perfil</a>
+            </div>
             <?php else: ?>
                 <div class="info-item">
                     <span>No tienes citas agendadas.</span>

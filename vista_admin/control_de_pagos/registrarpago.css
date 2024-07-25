@@ -150,11 +150,13 @@ body {
       margin-right: 20px;
     }
     
-    a {
+    a{
       text-decoration: none;
-      color: #fdfdfd;
+      color: #04820f;
     }
-    
+    footer a{
+      color: #ffffff;
+    }
     a:hover {
       color: #ffffff;
     }
@@ -169,5 +171,8 @@ body {
       margin-bottom: 300px;
       margin-left:850px ;
   
+    }
+    .registrarpagobtn{
+      color: #3e8e41;
     }
   
