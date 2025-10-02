@@ -1,10 +1,6 @@
-/* Estilos generales */
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
+@import url("../style/layout.css");
 
+/* Estilos generales */
 body {
   font-family: Open Sans, sans-serif;
   line-height: 1.6;
@@ -154,38 +150,7 @@ body {
   font-size: 16px;
   color: #080000;
 }
-.arriba {
-  list-style-type: none;
-  margin: 0;
-  display: block;
-  padding: 0;
-  overflow: hidden;
-  background-color: #5d4d81;
-}
-.contenedor_icons {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-gap: -20000px;
-  margin-left: 1000px;
-}
-.navbar_items {
-  margin-top: 16px;
-}
-
-.titulo_centrado {
-  text-align: center;
-}
-.arriba a {
-  float: left;
-}
-
-.arriba a {
-  display: block;
-  color: #ffffff;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
-}
+/* el header se gestiona desde layout.css */
 footer {
     background-color: #5d4d81;
     padding: 20px;
