@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-labelledby="title">
+  <title>Dentadura sobre implantes</title>
+  <defs>
+    <linearGradient id="grad2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#5d4d81" />
+      <stop offset="100%" stop-color="#9f8ee0" />
+    </linearGradient>
+  </defs>
+  <path d="M16 24c0-6 8-10 16-10s16 4 16 10v6c0 8-8 18-16 18s-16-10-16-18v-6z" fill="url(#grad2)" opacity="0.25" />
+  <path d="M22 24h20" stroke="#5d4d81" stroke-width="3" stroke-linecap="round" />
+  <path d="M20 46h4l2-10h12l2 10h4" fill="none" stroke="#5d4d81" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
+  <circle cx="24" cy="20" r="2" fill="#5d4d81" />
+  <circle cx="40" cy="20" r="2" fill="#5d4d81" />
+</svg>

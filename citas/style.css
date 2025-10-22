@@ -243,53 +243,48 @@ footer {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
   }
   .catalogo {
-    background-color:rgb(209, 184, 241);
-    padding: 20px;
-}
+    background-color: rgb(209, 184, 241);
+    padding: 40px 0;
+  }
 
-.servicios-list {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-}
+  .catalogo .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 56px 24px;
+    background: rgba(17, 14, 24, 0.35);
+    border-radius: 24px;
+    backdrop-filter: blur(8px);
+  }
 
-.servicios-list li {
-    margin: 20px;
-    width: calc(33.33% - 20px);
-    background-color: #fff;
-    padding: 20px;
-    border: 1px solid #ddd;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
+  .catalogo h1 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 2.5rem;
+    color: #ffffff;
+  }
 
-.servicios-list img {
-    width: 50px;
-    height: 50px;
-    margin-right: 10px;
-}
+  @media (max-width: 768px) {
+    .catalogo {
+      padding: 32px 0;
+    }
 
-.servicios-list h2 {
-    margin-top: 0;
-}
+    .catalogo .container {
+      padding: 44px 20px;
+    }
 
-.servicios-list p {
-    font-size: 18px;
-    margin-bottom: 20px;
-}
+    .catalogo h1 {
+      font-size: 2.25rem;
+    }
+  }
 
-.btn-ver-mas {
-    background-color: #5d4d81;
-    color: #fff;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-}
+  @media (max-width: 480px) {
+    .catalogo .container {
+      padding: 32px 16px;
+      border-radius: 18px;
+    }
 
-.btn-ver-mas:hover {
-    background-color: #5d4d81;
-}
+    .catalogo h1 {
+      font-size: 2rem;
+    }
+  }
+

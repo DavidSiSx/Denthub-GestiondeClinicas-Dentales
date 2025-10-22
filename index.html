@@ -7,8 +7,10 @@
     <title>Document</title>
     <link rel="preload" href="style/style.css">
     <link rel="preload" href="style/normalize.css">
+    <link rel="preload" href="style/components.css">
     <link rel="stylesheet" href="style/style.css">
     <link rel="stylesheet" href="style/normalize.css">
+    <link rel="stylesheet" href="style/components.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
@@ -43,38 +45,80 @@
             </div>
         </nav>
         <main>
-            <img src="./img/DENTHUB.png" alt="denthub" width="100%" height="600px">
+            <img src="./img/DENTHUB.png" alt="denthub" class="hero-image" loading="lazy">
             <div class="container1">
 
                 <h1 class="title">Bienvenidos a DentHub</h1>
                 <p class="description">Somos una clínica dental comprometida con la salud y el bienestar de nuestros
                     pacientes. Nuestro equipo de profesionales está capacitado para brindarle la atención que necesita
                     para mantener una sonrisa saludable y brillante.</p>
-                <div class="services">
-                    <div class="service">
-                        <i class="service-icon fas fa-tooth"></i>
-                        <h2 class="service-title">Limpieza dental</h2>
-                        <p class="service-description">El sarro retrae las encías y daña el soporte de los dientes. Pero
-                            una limpieza dental, profilaxis o curetaje profundo eliminará la placa.</p>
-                        <img src="./img/Limpieza.jfif" alt="Limpieza dental">
-
+                <section class="services">
+                    <div class="service-card-grid">
+                        <article class="service-card">
+                            <div class="service-card__header">
+                                <span class="service-card__icon-wrapper">
+                                    <img src="./img/icons/limpieza.svg" alt="Icono de limpieza dental" class="service-card__icon">
+                                </span>
+                                <div>
+                                    <span class="service-card__price-badge">Desde $600 MXN</span>
+                                    <h2 class="service-card__title">Limpieza dental</h2>
+                                    <p class="service-card__summary">Eliminamos placa y sarro con equipos ultrasónicos para
+                                        cuidar tus encías y mantener el brillo natural de tu sonrisa.</p>
+                                </div>
+                            </div>
+                            <button class="service-card__toggle" type="button" aria-expanded="false" aria-controls="home-detalles-1">Ver más</button>
+                            <div id="home-detalles-1" class="service-card__details" aria-hidden="true">
+                                <ul class="service-card__details-list">
+                                    <li><strong>Incluye:</strong> profilaxis profesional, pulido y aplicación de flúor.</li>
+                                    <li><strong>Duración:</strong> 45 minutos promedio.</li>
+                                    <li><strong>Recomendación:</strong> repetir cada 6 meses para prevenir caries.</li>
+                                </ul>
+                            </div>
+                        </article>
+                        <article class="service-card">
+                            <div class="service-card__header">
+                                <span class="service-card__icon-wrapper">
+                                    <img src="./img/icons/implantes.svg" alt="Icono de implantes dentales" class="service-card__icon">
+                                </span>
+                                <div>
+                                    <span class="service-card__price-badge">Desde $20,000 MXN</span>
+                                    <h2 class="service-card__title">Dentadura sobre implantes</h2>
+                                    <p class="service-card__summary">Rehabilitamos arcadas completas con implantes seguros y
+                                        materiales estéticos de última generación.</p>
+                                </div>
+                            </div>
+                            <button class="service-card__toggle" type="button" aria-expanded="false" aria-controls="home-detalles-2">Ver más</button>
+                            <div id="home-detalles-2" class="service-card__details" aria-hidden="true">
+                                <ul class="service-card__details-list">
+                                    <li><strong>Evaluación digital:</strong> plan personalizado guiado por tomografía 3D.</li>
+                                    <li><strong>Seguimiento:</strong> controles periódicos incluidos durante 12 meses.</li>
+                                    <li><strong>Garantía:</strong> estructura y componentes con cobertura extendida.</li>
+                                </ul>
+                            </div>
+                        </article>
+                        <article class="service-card">
+                            <div class="service-card__header">
+                                <span class="service-card__icon-wrapper">
+                                    <img src="./img/icons/sonrisa.svg" alt="Icono de diseño de sonrisa" class="service-card__icon">
+                                </span>
+                                <div>
+                                    <span class="service-card__price-badge">Paquetes desde $8,500 MXN</span>
+                                    <h2 class="service-card__title">Diseño de sonrisa</h2>
+                                    <p class="service-card__summary">Resalta tus facciones con carillas y coronas mínimamente
+                                        invasivas hechas a medida.</p>
+                                </div>
+                            </div>
+                            <button class="service-card__toggle" type="button" aria-expanded="false" aria-controls="home-detalles-3">Ver más</button>
+                            <div id="home-detalles-3" class="service-card__details" aria-hidden="true">
+                                <ul class="service-card__details-list">
+                                    <li><strong>Diagnóstico estético:</strong> mockup digital previo al tratamiento.</li>
+                                    <li><strong>Materiales premium:</strong> cerámicas resistentes al desgaste.</li>
+                                    <li><strong>Tiempo estimado:</strong> 2 a 3 citas según el plan personalizado.</li>
+                                </ul>
+                            </div>
+                        </article>
                     </div>
-                    <div class="service">
-                        <i class="service-icon fas fa-smile"></i>
-                        <h2 class="service-title">Dentadura sobre implantes</h2>
-                        <p class="service-description">Toda sonrisa merece un nuevo comienzo y ser disfrutada.</p>
-                        <img src="./img/dentadura-fija-sobre-4-implantes-precio.jpg" alt="Dentadura sobre implantes">
-
-                    </div>
-                    <div class="service">
-                        <i class="service-icon fas fa-heartbeat"></i>
-                        <h2 class="service-title">Diseño de sonrisa / Smile makeover</h2>
-                        <p class="service-description">Las coronas modifican a tu gusto: El color, forma, grosor y
-                            altura de tu sonrisa.</p>
-                        <img src="./img/Smile_Design-1024x576.png" alt="Diseño de sonrisa">
-                    </div>
-                    <!-- Add more services here -->
-                </div>
+                </section>
                 <section class="mapa">
                     <h2>Conoce nuestra ubicación</h2>
                     <iframe
@@ -118,8 +162,7 @@
         <div id="aviso-privacidad">
             <h2>Aviso de privacidad</h2>
             <p>Este sitio web utiliza cookies para mejorar su experiencia. Al continuar navegando, acepta nuestra
-                política
-                de privacidad.</p>
+                política de privacidad.</p>
         </div>
 
         <!-- Contenido de Términos y condiciones -->
@@ -138,12 +181,28 @@
                 <li><a href="#">Contacto</a></li>
             </ul>
         </div>
-</body>
+        <script>
+            document.addEventListener('DOMContentLoaded', () => {
+                document.querySelectorAll('.service-card').forEach((card) => {
+                    const button = card.querySelector('.service-card__toggle');
+                    const panel = card.querySelector('.service-card__details');
 
+                    if (!button || !panel) {
+                        return;
+                    }
 
+                    panel.classList.remove('is-open');
+                    panel.setAttribute('aria-hidden', 'true');
+                    button.setAttribute('aria-expanded', 'false');
 
-</html>
-
-</body>
-
+                    button.addEventListener('click', () => {
+                        const isOpen = panel.classList.toggle('is-open');
+                        button.setAttribute('aria-expanded', String(isOpen));
+                        panel.setAttribute('aria-hidden', String(!isOpen));
+                        button.textContent = isOpen ? 'Ocultar detalles' : 'Ver más';
+                    });
+                });
+            });
+        </script>
+    </body>
 </html>

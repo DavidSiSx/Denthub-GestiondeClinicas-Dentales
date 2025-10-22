@@ -48,77 +48,34 @@ body {
 .catalogo .container {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 20px;
-  background-color: #e0d4f7;
-  border-radius: 10px;
+  padding: 60px 24px;
+  background: rgba(93, 77, 129, 0.08);
+  border-radius: 20px;
 }
-
-.servicios-list {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
-}
-
-.servicios-list li {
-  background-color: #fff;
-  padding: 20px;
-  margin: 10px;
-  border-radius: 10px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  width: 30%;
+.catalogo h1 {
   text-align: center;
-  position: relative; /* To contain the absolute positioning of the details */
+  font-size: 2.5rem;
+  margin-bottom: 2.5rem;
+  color: #352a55;
 }
 
-.servicios-list img {
-  max-width: 50px;
-  margin-bottom: 20px;
+@media (max-width: 768px) {
+  .catalogo .container {
+    padding: 48px 20px;
+  }
+
+  .catalogo h1 {
+    font-size: 2.25rem;
+  }
 }
 
-.btn-ver-mas {
-  background-color: #5d4d81;
-  color: #fff;
-  border: none;
-  padding: 10px 20px;
-  cursor: pointer;
-  border-radius: 5px;
-}
+@media (max-width: 480px) {
+  .catalogo .container {
+    padding: 36px 16px;
+    border-radius: 16px;
+  }
 
-.btn-ver-mas:hover {
-  background-color: #333;
-}
-
-/* Detalles */
-.detalles {
-  display: none;
-  margin-top: 20px;
-  text-align: left;
-  border-top: 1px solid #ddd;
-  padding-top: 10px;
-  position: absolute;
-  width: 100%;
-  left: 0;
-  top: 100%;
-  z-index: 1;
-  background-color: #fff;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  border-radius: 10px;
-}
-
-/* Precio */
-.precio {
-  color: #5d4d81;
-  font-weight: bold;
-  background-color: #f0e5ff;
-  padding: 5px 10px;
-  border-radius: 5px;
-  display: inline-block;
-  margin-top: 10px;
-}
-h1{
-  text-align: center;
-  font-size: 40px;
+  .catalogo h1 {
+    font-size: 2rem;
+  }
 }
