@@ -1,10 +1,9 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Clínica Dental</title>
+    <title>Agendar cita | Dentavida</title>
     <link rel="stylesheet" href="./style.css">
     <script src="../scripts/site-header.js" defer></script>
 </head>
@@ -73,46 +72,214 @@
                         <br><strong>Materiales Utilizados:</strong> Herramientas de limpieza dental, pasta de pulido, flúor.
                         <br><strong class="precio">Costo:</strong> <span class="precio">$600 MXN</span></p>
                     </div>
-                </li>
-                <li>
-                    <img src="../img/higiene.png" alt="Icono de blanqueamiento">
-                    <h2>Blanqueamiento dental</h2>
-                    <p>Nuestros dentistas expertos ofrecen blanqueamiento dental para dejar tus dientes con un brillo impresionante.</p>
-                    <button class="btn-ver-mas" data-target="detalles5">Ver más</button>
-                    <div id="detalles5" class="detalles">
-                        <p>El blanqueamiento dental es un procedimiento cosmético que elimina manchas y decoloraciones en los dientes, mejorando su apariencia y logrando una sonrisa más blanca y brillante.
-                        <br><strong>Procedimiento:</strong> Aplicación de un gel blanqueador, activación del gel con luz LED, sesiones de mantenimiento.
-                        <br><strong>Duración del tratamiento:</strong> 60-90 minutos.
-                        <br><strong>Materiales Utilizados:</strong> Gel blanqueador, luz LED, protectores de encías.
-                        <br><strong class="precio">Costo:</strong> <span class="precio">$1,500 MXN</span></p>
+                </div>
+            </div>
+        </section>
+
+        <section class="steps">
+            <div class="container">
+                <h2>Pasos para tu cita</h2>
+                <p class="section-intro">Organiza tu visita en minutos siguiendo estos sencillos pasos.</p>
+                <div class="steps-grid">
+                    <article class="step">
+                        <span class="step-icon" aria-hidden="true">
+                            <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <circle cx="21" cy="21" r="14" stroke="currentColor" stroke-width="2"/>
+                                <path d="M32 32L43 43" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                            </svg>
+                        </span>
+                        <h3>Elige el servicio</h3>
+                        <p>Selecciona el tratamiento que mejor se adapta a tus necesidades dentales.</p>
+                    </article>
+                    <article class="step">
+                        <span class="step-icon" aria-hidden="true">
+                            <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <rect x="5" y="9" width="38" height="30" rx="3" stroke="currentColor" stroke-width="2"/>
+                                <path d="M12 5V13" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                                <path d="M36 5V13" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                                <path d="M5 18H43" stroke="currentColor" stroke-width="2"/>
+                                <rect x="14" y="24" width="8" height="8" rx="2" stroke="currentColor" stroke-width="2"/>
+                            </svg>
+                        </span>
+                        <h3>Selecciona fecha y hora</h3>
+                        <p>Escoge el día y la hora que prefieras para tu consulta desde nuestro calendario.</p>
+                    </article>
+                    <article class="step">
+                        <span class="step-icon" aria-hidden="true">
+                            <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <circle cx="24" cy="16" r="8" stroke="currentColor" stroke-width="2"/>
+                                <path d="M10 41C11.5 33 17 27 24 27C31 27 36.5 33 38 41" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                                <path d="M30 35L36 29" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                                <path d="M36 35L42 29" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                            </svg>
+                        </span>
+                        <h3>Confirma tus datos</h3>
+                        <p>Completa el formulario con tus datos de contacto para confirmar la cita.</p>
+                    </article>
+                </div>
+                <a href="https://wa.me/5218000000000" class="btn btn-secondary" target="_blank" rel="noopener">Agendar vía WhatsApp</a>
+            </div>
+        </section>
+
+        <section class="appointment">
+            <div class="container appointment-layout">
+                <div class="appointment-form">
+                    <h2>Solicita tu cita</h2>
+                    <p>Completa el formulario y uno de nuestros especialistas confirmará tu consulta.</p>
+                    <form action="#" method="post" class="form">
+                        <div class="form-field">
+                            <label for="nombre">Nombre completo</label>
+                            <input type="text" id="nombre" name="nombre" placeholder="Ingresa tu nombre" required>
+                        </div>
+                        <div class="form-field">
+                            <label for="email">Correo electrónico</label>
+                            <input type="email" id="email" name="email" placeholder="nombre@correo.com" required>
+                        </div>
+                        <div class="form-field">
+                            <label for="telefono">Teléfono</label>
+                            <input type="tel" id="telefono" name="telefono" placeholder="(55) 1234 5678" required>
+                        </div>
+                        <div class="form-field">
+                            <label for="servicio">Tipo de servicio</label>
+                            <select id="servicio" name="servicio" required>
+                                <option value="" disabled selected>Selecciona una opción</option>
+                                <option value="caries">Tratamientos de caries</option>
+                                <option value="ortodoncia">Ortodoncia</option>
+                                <option value="cirugia">Cirugía maxilofacial</option>
+                                <option value="limpieza">Limpieza dental</option>
+                                <option value="blanqueamiento">Blanqueamiento dental</option>
+                            </select>
+                        </div>
+                        <div class="form-field">
+                            <label for="fecha">Fecha preferida</label>
+                            <input type="date" id="fecha" name="fecha" required>
+                        </div>
+                        <div class="form-field">
+                            <label for="hora">Hora preferida</label>
+                            <input type="time" id="hora" name="hora" required>
+                        </div>
+                        <div class="form-field">
+                            <label for="mensaje">Comentarios adicionales</label>
+                            <textarea id="mensaje" name="mensaje" rows="4" placeholder="Cuéntanos detalles importantes"></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Enviar solicitud</button>
+                    </form>
+                </div>
+                <div class="appointment-info">
+                    <h2>Beneficios Dentavida</h2>
+                    <p>Descubre todo lo que incluye tu experiencia con nuestro equipo dental.</p>
+                    <div class="accordion">
+                        <details open>
+                            <summary>Profesionales certificados</summary>
+                            <p>Contamos con especialistas con amplia experiencia y certificaciones nacionales e internacionales.</p>
+                        </details>
+                        <details>
+                            <summary>Tratamientos personalizados</summary>
+                            <p>Diseñamos planes de tratamiento a la medida de tus objetivos estéticos y de salud.</p>
+                        </details>
+                        <details>
+                            <summary>Instalaciones seguras</summary>
+                            <p>Nuestras cabinas siguen protocolos de higiene y esterilización avalados por la norma oficial.</p>
+                        </details>
+                        <details>
+                            <summary>Planes de pago flexibles</summary>
+                            <p>Ofrecemos opciones de financiamiento y promociones especiales durante todo el año.</p>
+                        </details>
                     </div>
-                </li>
-            </ul>
-        </div>
-    </section>
-    <script src="./script.js"></script>
-</body>
-    <section class="testimonials">
-        <div class="container">
-            <h2>Nuestros Pacientes Hablan</h2>
-            <ul>
-                <li>
-                    <p>"La atención en esta clínica es excepcional. Me siento muy cómodo y seguro en sus manos."</p>
-                    <span>- Juan Pérez</span>
-                </li>
-                <li>
-                    <p>"La limpieza y profilaxis que me hicieron fue increíble. Mi boca se siente fresca y limpia."</p>
-                    <span>- María Rodríguez</span>
-                </li>
-                <li>
-                    <p>"El tratamiento de ortodoncia que me hicieron cambió mi vida. Ahora tengo una sonrisa perfecta."
-                    </p>
-                    <span>- Carlos Gómez</span>
-                </li>
-            </ul>
-        </div>
-    </section>
-    <footer>
+                </div>
+            </div>
+        </section>
+
+        <section class="catalogo">
+            <div class="container">
+                <h2>Catálogo de Servicios</h2>
+                <ul class="servicios-list">
+                    <li>
+                        <img src="../img/caries-dental.png" alt="Icono de tratamiento de caries">
+                        <div>
+                            <h3>Tratamientos de caries y restauraciones</h3>
+                            <p>Nuestros dentistas expertos ofrecen tratamientos de caries y restauraciones para devolverle la salud a tus dientes.</p>
+                            <button class="btn btn-outline btn-ver-mas" data-target="detalles1">Ver más</button>
+                            <div id="detalles1" class="detalles">
+                                <p>Los tratamientos incluyen la eliminación de la caries y la restauración del diente afectado con materiales de alta calidad.</p>
+                                <p><strong>Duración:</strong> 30-60 minutos. <strong class="precio">Costo:</strong> <span class="precio">$800 MXN</span></p>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <img src="../img/ortodoncia.png" alt="Icono de ortodoncia">
+                        <div>
+                            <h3>Ortodoncia y tratamientos de alineación</h3>
+                            <p>Ortodoncia con brackets o alineadores transparentes para lograr una sonrisa perfectamente alineada.</p>
+                            <button class="btn btn-outline btn-ver-mas" data-target="detalles2">Ver más</button>
+                            <div id="detalles2" class="detalles">
+                                <p>Incluye evaluación inicial, colocación de brackets o alineadores y ajustes periódicos.</p>
+                                <p><strong>Duración:</strong> 18-24 meses. <strong class="precio">Costo:</strong> <span class="precio">desde $20,000 MXN</span></p>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <img src="../img/cirugia-plastica.png" alt="Icono de cirugía">
+                        <div>
+                            <h3>Cirugía oral y maxilofacial</h3>
+                            <p>Soluciones especializadas para problemas complejos de salud oral y maxilofacial.</p>
+                            <button class="btn btn-outline btn-ver-mas" data-target="detalles3">Ver más</button>
+                            <div id="detalles3" class="detalles">
+                                <p>Procedimientos con tecnología de última generación y acompañamiento postoperatorio.</p>
+                                <p><strong>Duración:</strong> 1-3 horas. <strong class="precio">Costo:</strong> <span class="precio">desde $15,000 MXN</span></p>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <img src="../img/cepillo-de-dientes.png" alt="Icono de limpieza dental">
+                        <div>
+                            <h3>Limpieza y profilaxis</h3>
+                            <p>Limpieza profesional para mantener tus dientes y encías saludables durante todo el año.</p>
+                            <button class="btn btn-outline btn-ver-mas" data-target="detalles4">Ver más</button>
+                            <div id="detalles4" class="detalles">
+                                <p>Incluye remoción de placa y sarro, pulido dental y aplicación de flúor protectora.</p>
+                                <p><strong>Duración:</strong> 45-60 minutos. <strong class="precio">Costo:</strong> <span class="precio">$600 MXN</span></p>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <img src="../img/higiene.png" alt="Icono de blanqueamiento">
+                        <div>
+                            <h3>Blanqueamiento dental</h3>
+                            <p>Resultados visibles desde la primera sesión con productos aprobados por especialistas.</p>
+                            <button class="btn btn-outline btn-ver-mas" data-target="detalles5">Ver más</button>
+                            <div id="detalles5" class="detalles">
+                                <p>Aplicación de gel blanqueador y luz LED para un acabado uniforme y brillante.</p>
+                                <p><strong>Duración:</strong> 60-90 minutos. <strong class="precio">Costo:</strong> <span class="precio">$1,500 MXN</span></p>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="testimonials">
+            <div class="container">
+                <h2>Nuestros pacientes hablan</h2>
+                <ul>
+                    <li>
+                        <p>"La atención en esta clínica es excepcional. Me siento muy cómodo y seguro en sus manos."</p>
+                        <span>- Juan Pérez</span>
+                    </li>
+                    <li>
+                        <p>"La limpieza y profilaxis que me hicieron fue increíble. Mi boca se siente fresca y limpia."</p>
+                        <span>- María Rodríguez</span>
+                    </li>
+                    <li>
+                        <p>"El tratamiento de ortodoncia que me hicieron cambió mi vida. Ahora tengo una sonrisa perfecta."</p>
+                        <span>- Carlos Gómez</span>
+                    </li>
+                </ul>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
         <div class="footer-container">
             <ul>
                 <li><a href="#aviso-privacidad">Aviso de privacidad</a></li>
@@ -123,35 +290,26 @@
         </div>
     </footer>
 
-    <!-- Contenido de Aviso de privacidad -->
-    <div id="aviso-privacidad">
+    <div id="aviso-privacidad" class="legal-modal" hidden>
         <h2>Aviso de privacidad</h2>
-        <p>Este sitio web utiliza cookies para mejorar su experiencia. Al continuar navegando, acepta nuestra política
-            de privacidad.</p>
+        <p>Este sitio web utiliza cookies para mejorar su experiencia. Al continuar navegando, acepta nuestra política de privacidad.</p>
     </div>
 
-    <!-- Contenido de Términos y condiciones -->
-    <div id="terminos-y-condiciones">
+    <div id="terminos-y-condiciones" class="legal-modal" hidden>
         <h2>Términos y condiciones</h2>
         <p>Al utilizar este sitio web, acepta nuestros términos y condiciones.</p>
     </div>
 
-    <!-- Contenido de Mapa de sitio -->
-    <div id="mapa-de-sitio">
+    <div id="mapa-de-sitio" class="legal-modal" hidden>
         <h2>Mapa de sitio</h2>
         <ul>
-            <li><a href="#">Inicio</a></li>
-            <li><a href="#">Servicios</a></li>
-            <li><a href="#">Acerca de</a></li>
-            <li><a href="#">Contacto</a></li>
+            <li><a href="../index.html">Inicio</a></li>
+            <li><a href="../servicios/index.html">Servicios</a></li>
+            <li><a href="#agenda">Agendar cita</a></li>
+            <li><a href="../index.html#contacto">Contacto</a></li>
         </ul>
     </div>
+
+    <script src="./script.js"></script>
 </body>
-
-
-
-</html>
-
-</body>
-
 </html>
