@@ -1,0 +1,36 @@
+<svg width="1600" height="900" viewBox="0 0 1600 900" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="heroGradient" x1="0" y1="0" x2="1600" y2="900" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#6b57d4" />
+      <stop offset="50%" stop-color="#7f66e8" />
+      <stop offset="100%" stop-color="#4c36ac" />
+    </linearGradient>
+    <radialGradient id="radialGlow" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(320 120) rotate(45) scale(520 420)">
+      <stop stop-color="#ffffff" stop-opacity="0.35" />
+      <stop offset="1" stop-color="#ffffff" stop-opacity="0" />
+    </radialGradient>
+    <radialGradient id="radialGlow2" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(1200 680) rotate(20) scale(460 360)">
+      <stop stop-color="#ffffff" stop-opacity="0.18" />
+      <stop offset="1" stop-color="#ffffff" stop-opacity="0" />
+    </radialGradient>
+    <linearGradient id="wave" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.15" />
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0" />
+    </linearGradient>
+  </defs>
+  <rect width="1600" height="900" fill="url(#heroGradient)" />
+  <ellipse cx="360" cy="180" rx="520" ry="360" fill="url(#radialGlow)" />
+  <ellipse cx="1260" cy="680" rx="480" ry="340" fill="url(#radialGlow2)" />
+  <g opacity="0.22">
+    <path d="M0 520C210 620 350 640 520 600C720 550 880 420 1100 430C1280 438 1440 520 1600 620V900H0V520Z" fill="url(#wave)" />
+  </g>
+  <g opacity="0.26">
+    <circle cx="1330" cy="180" r="140" stroke="#F5F1FF" stroke-width="40" stroke-opacity="0.18" />
+    <circle cx="280" cy="650" r="120" stroke="#F5F1FF" stroke-width="26" stroke-opacity="0.2" />
+  </g>
+  <g opacity="0.35" stroke="#ffffff" stroke-opacity="0.3" stroke-width="2">
+    <path d="M1160 140C1230 120 1300 120 1370 140" stroke-linecap="round" />
+    <path d="M1190 180C1250 190 1310 190 1370 180" stroke-linecap="round" />
+    <path d="M1220 220C1270 232 1320 232 1370 220" stroke-linecap="round" />
+  </g>
+</svg>

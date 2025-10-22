@@ -13,196 +13,110 @@
     <link rel="stylesheet" href="style/components.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
+    <link
+        href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
         rel="stylesheet">
-
+    <script src="./scripts/site-header.js" defer></script>
 </head>
 
-<body>
-    <header>
-        <nav>
-            <div class="arriba">
-                <a class="navbar-brand" href="#">
-                    <img src="./img/logo.png" width="100" height="50" alt="">
-                </a>
-                <div class="navbar_items">
-                    <li><a href="#">Home</a></li>
-                    <li><a href="./servicios/index.html">Servicios</a></li>
+<body data-base-path=".">
+    <header id="site-header"></header>
 
-                    <li><a href="./citas/index.html">Agendar cita</a></li>
-                    <div class="contenedor_icons">
-                        <a class="navbar-brand" href="./registro_usr/index.html">
-                            <img src="./img/usuario (1).png" alt="" width="30" height="24">
-                        </a>
-                        <a class="navbar-brand" href="https://www.google.com.mx/maps/preview">
-                            <img src="./img/marcador (2).png" alt="" width="30" height="24">
-                        </a>
-                        <a class="navbar-brand" href="#">
-                            <img src="./img/hogar (2).png" alt="" width="30" height="24">
-                        </a>
-                    </div>
+    <main>
+        <img src="./img/DENTHUB.png" alt="denthub" width="100%" height="600px">
+        <div class="container1">
+            <h1 class="title">Bienvenidos a DentHub</h1>
+            <p class="description">Somos una clínica dental comprometida con la salud y el bienestar de nuestros
+                pacientes. Nuestro equipo de profesionales está capacitado para brindarle la atención que necesita para
+                mantener una sonrisa saludable y brillante.</p>
+            <div class="services">
+                <div class="service">
+                    <i class="service-icon fas fa-tooth"></i>
+                    <h2 class="service-title">Limpieza dental</h2>
+                    <p class="service-description">El sarro retrae las encías y daña el soporte de los dientes. Pero
+                        una limpieza dental, profilaxis o curetaje profundo eliminará la placa.</p>
+                    <img src="./img/Limpieza.jfif" alt="Limpieza dental">
+
                 </div>
+                <div class="service">
+                    <i class="service-icon fas fa-smile"></i>
+                    <h2 class="service-title">Dentadura sobre implantes</h2>
+                    <p class="service-description">Toda sonrisa merece un nuevo comienzo y ser disfrutada.</p>
+                    <img src="./img/dentadura-fija-sobre-4-implantes-precio.jpg" alt="Dentadura sobre implantes">
+
+                </div>
+                <div class="service">
+                    <i class="service-icon fas fa-heartbeat"></i>
+                    <h2 class="service-title">Diseño de sonrisa / Smile makeover</h2>
+                    <p class="service-description">Las coronas modifican a tu gusto: El color, forma, grosor y altura
+                        de tu sonrisa.</p>
+                    <img src="./img/Smile_Design-1024x576.png" alt="Diseño de sonrisa">
+                </div>
+                <!-- Add more services here -->
             </div>
-        </nav>
-        <main>
-            <img src="./img/DENTHUB.png" alt="denthub" class="hero-image" loading="lazy">
-            <div class="container1">
+            <section class="mapa">
+                <h2>Conoce nuestra ubicación</h2>
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d59531.8079242096!2d-86.91123967840856!3d21.16282266294809!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1sgoogle%20maps!5e0!3m2!1ses-419!2smx!4v1720497189297!5m2!1ses-419!2smx"
+                    width="1120" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"></iframe>
 
-                <h1 class="title">Bienvenidos a DentHub</h1>
-                <p class="description">Somos una clínica dental comprometida con la salud y el bienestar de nuestros
-                    pacientes. Nuestro equipo de profesionales está capacitado para brindarle la atención que necesita
-                    para mantener una sonrisa saludable y brillante.</p>
-                <section class="services">
-                    <div class="service-card-grid">
-                        <article class="service-card">
-                            <div class="service-card__header">
-                                <span class="service-card__icon-wrapper">
-                                    <img src="./img/icons/limpieza.svg" alt="Icono de limpieza dental" class="service-card__icon">
-                                </span>
-                                <div>
-                                    <span class="service-card__price-badge">Desde $600 MXN</span>
-                                    <h2 class="service-card__title">Limpieza dental</h2>
-                                    <p class="service-card__summary">Eliminamos placa y sarro con equipos ultrasónicos para
-                                        cuidar tus encías y mantener el brillo natural de tu sonrisa.</p>
-                                </div>
-                            </div>
-                            <button class="service-card__toggle" type="button" aria-expanded="false" aria-controls="home-detalles-1">Ver más</button>
-                            <div id="home-detalles-1" class="service-card__details" aria-hidden="true">
-                                <ul class="service-card__details-list">
-                                    <li><strong>Incluye:</strong> profilaxis profesional, pulido y aplicación de flúor.</li>
-                                    <li><strong>Duración:</strong> 45 minutos promedio.</li>
-                                    <li><strong>Recomendación:</strong> repetir cada 6 meses para prevenir caries.</li>
-                                </ul>
-                            </div>
-                        </article>
-                        <article class="service-card">
-                            <div class="service-card__header">
-                                <span class="service-card__icon-wrapper">
-                                    <img src="./img/icons/implantes.svg" alt="Icono de implantes dentales" class="service-card__icon">
-                                </span>
-                                <div>
-                                    <span class="service-card__price-badge">Desde $20,000 MXN</span>
-                                    <h2 class="service-card__title">Dentadura sobre implantes</h2>
-                                    <p class="service-card__summary">Rehabilitamos arcadas completas con implantes seguros y
-                                        materiales estéticos de última generación.</p>
-                                </div>
-                            </div>
-                            <button class="service-card__toggle" type="button" aria-expanded="false" aria-controls="home-detalles-2">Ver más</button>
-                            <div id="home-detalles-2" class="service-card__details" aria-hidden="true">
-                                <ul class="service-card__details-list">
-                                    <li><strong>Evaluación digital:</strong> plan personalizado guiado por tomografía 3D.</li>
-                                    <li><strong>Seguimiento:</strong> controles periódicos incluidos durante 12 meses.</li>
-                                    <li><strong>Garantía:</strong> estructura y componentes con cobertura extendida.</li>
-                                </ul>
-                            </div>
-                        </article>
-                        <article class="service-card">
-                            <div class="service-card__header">
-                                <span class="service-card__icon-wrapper">
-                                    <img src="./img/icons/sonrisa.svg" alt="Icono de diseño de sonrisa" class="service-card__icon">
-                                </span>
-                                <div>
-                                    <span class="service-card__price-badge">Paquetes desde $8,500 MXN</span>
-                                    <h2 class="service-card__title">Diseño de sonrisa</h2>
-                                    <p class="service-card__summary">Resalta tus facciones con carillas y coronas mínimamente
-                                        invasivas hechas a medida.</p>
-                                </div>
-                            </div>
-                            <button class="service-card__toggle" type="button" aria-expanded="false" aria-controls="home-detalles-3">Ver más</button>
-                            <div id="home-detalles-3" class="service-card__details" aria-hidden="true">
-                                <ul class="service-card__details-list">
-                                    <li><strong>Diagnóstico estético:</strong> mockup digital previo al tratamiento.</li>
-                                    <li><strong>Materiales premium:</strong> cerámicas resistentes al desgaste.</li>
-                                    <li><strong>Tiempo estimado:</strong> 2 a 3 citas según el plan personalizado.</li>
-                                </ul>
-                            </div>
-                        </article>
-                    </div>
-                </section>
-                <section class="mapa">
-                    <h2>Conoce nuestra ubicación</h2>
-                    <iframe
-                        src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d59531.8079242096!2d-86.91123967840856!3d21.16282266294809!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1sgoogle%20maps!5e0!3m2!1ses-419!2smx!4v1720497189297!5m2!1ses-419!2smx"
-                        width="1120" height="450" style="border:0;" allowfullscreen="" loading="lazy"
-                        referrerpolicy="no-referrer-when-downgrade"></iframe>
-                    
-                </section>
-                <section class="testimonials">
-                    <h2>Lo que nuestros pacientes dicen</h2>
-                    <blockquote>
-                        <p>"Me encanta la atención que recibo en DentHub. El personal es amable y profesional."</p>
-                        <cite>- María G.</cite>
-                    </blockquote>
-                    <blockquote>
-                        <p>"La clínica es muy moderna y limpia. Me siento cómodo cada vez que voy."</p>
-                        <cite>- Juan P.</cite>
-                    </blockquote>
-                </section>
-                <section class="call-to-action">
-                    <h2>¡Reserva tu cita hoy!</h2>
-                    <p>LLámanos al 555-555-5555 o haz clic en el botón de abajo para reservar tu cita.</p>
-                    <a href="./citas/index.html"><button>Reservar cita</button></a>
-                </section>
+            </section>
+            <section class="testimonials">
+                <h2>Lo que nuestros pacientes dicen</h2>
+                <blockquote>
+                    <p>"Me encanta la atención que recibo en DentHub. El personal es amable y profesional."</p>
+                    <cite>- María G.</cite>
+                </blockquote>
+                <blockquote>
+                    <p>"La clínica es muy moderna y limpia. Me siento cómodo cada vez que voy."</p>
+                    <cite>- Juan P.</cite>
+                </blockquote>
+            </section>
+            <section class="call-to-action">
+                <h2>¡Reserva tu cita hoy!</h2>
+                <p>LLámanos al 555-555-5555 o haz clic en el botón de abajo para reservar tu cita.</p>
+                <a href="./citas/index.html"><button>Reservar cita</button></a>
+            </section>
 
-            </div>
-        </main>
-
-        <footer class="footer">
-            <div class="footer-container">
-                <ul>
-                    <li><a href="#aviso-privacidad">Aviso de privacidad</a></li>
-                    <li><a href="#terminos-y-condiciones">Términos y condiciones</a></li>
-                    <li><a href="#mapa-de-sitio">Mapa de sitio</a></li>
-                </ul>
-                <p>&copy; 2023 Dentavida. Todos los derechos reservados.</p>
-            </div>
-        </footer>
-
-        <!-- Contenido de Aviso de privacidad -->
-        <div id="aviso-privacidad">
-            <h2>Aviso de privacidad</h2>
-            <p>Este sitio web utiliza cookies para mejorar su experiencia. Al continuar navegando, acepta nuestra
-                política de privacidad.</p>
         </div>
+    </main>
 
-        <!-- Contenido de Términos y condiciones -->
-        <div id="terminos-y-condiciones">
-            <h2>Términos y condiciones</h2>
-            <p>Al utilizar este sitio web, acepta nuestros términos y condiciones.</p>
-        </div>
-
-        <!-- Contenido de Mapa de sitio -->
-        <div id="mapa-de-sitio">
-            <h2>Mapa de sitio</h2>
+    <footer class="footer">
+        <div class="footer-container">
             <ul>
-                <li><a href="#">Inicio</a></li>
-                <li><a href="#">Servicios</a></li>
-                <li><a href="#">Acerca de</a></li>
-                <li><a href="#">Contacto</a></li>
+                <li><a href="#aviso-privacidad">Aviso de privacidad</a></li>
+                <li><a href="#terminos-y-condiciones">Términos y condiciones</a></li>
+                <li><a href="#mapa-de-sitio">Mapa de sitio</a></li>
             </ul>
+            <p>&copy; 2023 Dentavida. Todos los derechos reservados.</p>
         </div>
-        <script>
-            document.addEventListener('DOMContentLoaded', () => {
-                document.querySelectorAll('.service-card').forEach((card) => {
-                    const button = card.querySelector('.service-card__toggle');
-                    const panel = card.querySelector('.service-card__details');
+    </footer>
 
-                    if (!button || !panel) {
-                        return;
-                    }
+    <!-- Contenido de Aviso de privacidad -->
+    <div id="aviso-privacidad">
+        <h2>Aviso de privacidad</h2>
+        <p>Este sitio web utiliza cookies para mejorar su experiencia. Al continuar navegando, acepta nuestra
+            política
+            de privacidad.</p>
+    </div>
 
-                    panel.classList.remove('is-open');
-                    panel.setAttribute('aria-hidden', 'true');
-                    button.setAttribute('aria-expanded', 'false');
+    <!-- Contenido de Términos y condiciones -->
+    <div id="terminos-y-condiciones">
+        <h2>Términos y condiciones</h2>
+        <p>Al utilizar este sitio web, acepta nuestros términos y condiciones.</p>
+    </div>
 
-                    button.addEventListener('click', () => {
-                        const isOpen = panel.classList.toggle('is-open');
-                        button.setAttribute('aria-expanded', String(isOpen));
-                        panel.setAttribute('aria-hidden', String(!isOpen));
-                        button.textContent = isOpen ? 'Ocultar detalles' : 'Ver más';
-                    });
-                });
-            });
-        </script>
-    </body>
+    <!-- Contenido de Mapa de sitio -->
+    <div id="mapa-de-sitio">
+        <h2>Mapa de sitio</h2>
+        <ul>
+            <li><a href="#">Inicio</a></li>
+            <li><a href="#">Servicios</a></li>
+            <li><a href="#">Acerca de</a></li>
+            <li><a href="#">Contacto</a></li>
+        </ul>
+    </div>
+</body>
+
 </html>
