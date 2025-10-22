@@ -1,39 +1,8 @@
+@import url("../style/layout.css");
+
 body {
     font-family: "Open Sans", sans-serif;
     background-color: rgb(209, 184, 241);
-  }
-  
-  .arriba {
-    list-style-type: none;
-    margin: 0;
-    display: block;
-    padding: 0;
-    overflow: hidden;
-    background-color: #5d4d81;
-  }
-  .contenedor_icons {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-gap: -20000px;
-    margin-left: 1000px;
-  }
-  .navbar_items {
-    margin-top: 16px;
-  }
-  
-  .titulo_centrado {
-    text-align: center;
-  }
-  .arriba a {
-    float: left;
-  }
-  
-  .arriba a {
-    display: block;
-    color: #ffffff;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
   }
   
   .profile-card {

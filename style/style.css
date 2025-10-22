@@ -1,51 +1,14 @@
-body {
-  font-family: "Open Sans", sans-serif;
-  background-color: rgb(209, 184, 241);
-}
+@import url("./layout.css");
 
-.arriba {
-  list-style-type: none;
-  margin: 0;
-  display: block;
-  padding: 0;
-  overflow: hidden;
+.mapa {
   background-color: #5d4d81;
 }
-.contenedor_icons {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-gap: -2000px;
-  margin-left: 1000px;
-}
-.navbar_items {
-  margin-top: 16px;
-}
-
-.titulo_centrado {
-  text-align: center;
-}
-.arriba a {
-  float: left;
-}
-
-.arriba a {
-  display: block;
-  color: #ffffff;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
-
-}
-.mapa{
-  background-color: #5d4d81;  
-}
-.mapa h2{
+.mapa h2 {
   color: #fff;
   text-align: center;
   font-size: 120%;
-  
 }
-.mapa iframe{
+.mapa iframe {
   position: relative;
   margin: 20px;
 }

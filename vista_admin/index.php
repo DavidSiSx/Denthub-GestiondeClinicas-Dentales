@@ -51,35 +51,11 @@ $conn->close();
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <script src="../scripts/site-header.js" defer></script>
 </head>
 
-<body>
-<header>
-        <nav>
-            <div class="arriba">
-                <a class="navbar-brand" href="#">
-                    <img src="../img/logo.png" width="100" height="50" alt="">
-                </a>
-                <div class="navbar_items">
-                    <li><a href="../index.html">Home</a></li>
-                    <li><a href="./calendario_admin/index.php">Mis citas</a></li>
-                    <li><a href="./pacientes/index.php">Pacientes</a></li>
-                    <li><a href="./control_de_pagos/index.php">Control de pagos</a></li>
-                    <div class="contenedor_icons">
-                        <a class="navbar-brand" href="../registro_usr/index.html">
-                            <img src="../img/usuario (1).png" alt="" width="30" height="24">
-                        </a>
-                        <a class="navbar-brand" href="https://www.google.com.mx/maps/preview">
-                            <img src="../img/marcador (2).png" alt="" width="30" height="24">
-                        </a>
-                        <a class="navbar-brand" href="../index.html">
-                            <img src="../img/hogar (2).png" alt="" width="30" height="24">
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </nav>
-    </header>
+<body data-base-path=".." data-nav-context="admin">
+<header id="site-header"></header>
     <div class="container">
         <div class="profile-card">
             <div class="profile-header">

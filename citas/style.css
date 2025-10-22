@@ -1,24 +1,6 @@
-:root {
-  --color-background: #f5f1ff;
-  --color-surface: #ffffff;
-  --color-primary: #5a3fd3;
-  --color-primary-dark: #4828b8;
-  --color-secondary: #16a34a;
-  --color-text: #2b2242;
-  --color-text-light: #5f5677;
-  --shadow-soft: 0 20px 50px rgba(64, 44, 124, 0.12);
-  --radius-lg: 24px;
-  --radius-md: 16px;
-  --radius-sm: 12px;
-  font-family: "Poppins", "Open Sans", sans-serif;
-}
+@import url("../style/layout.css");
 
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
-
+/* Estilos generales */
 body {
   font-family: inherit;
   line-height: 1.6;
@@ -246,95 +228,66 @@ a {
 .appointment {
   padding: clamp(4rem, 8vw, 6.5rem) 0;
 }
-
-.appointment-layout {
-  display: grid;
-  gap: 2.5rem;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-}
-
-.appointment-form,
-.appointment-info {
-  background: var(--color-surface);
-  border-radius: var(--radius-lg);
-  padding: clamp(2rem, 4vw, 3rem);
-  box-shadow: var(--shadow-soft);
-}
-
-.appointment p {
-  color: var(--color-text-light);
-  margin-bottom: 2rem;
-}
-
-.form {
-  display: grid;
-  gap: 1.5rem;
-}
-
-.form-field {
-  display: grid;
-  gap: 0.6rem;
-}
-
-label {
-  font-weight: 600;
-}
-
-input,
-select,
-textarea {
-  width: 100%;
-  padding: 0.85rem 1rem;
-  border-radius: var(--radius-sm);
-  border: 1px solid rgba(90, 63, 211, 0.2);
-  background-color: #fcfbff;
-  color: var(--color-text);
-  font: inherit;
-  transition: border-color 0.2s ease, box-shadow 0.2s ease;
-}
-
-input:focus,
-select:focus,
-textarea:focus {
-  outline: none;
-  border-color: var(--color-primary);
-  box-shadow: 0 0 0 3px rgba(90, 63, 211, 0.15);
-}
-
-textarea {
-  resize: vertical;
-}
-
-.accordion details {
-  border: 1px solid rgba(90, 63, 211, 0.15);
-  border-radius: var(--radius-sm);
-  padding: 1.15rem 1.25rem;
-  background: #fbfaff;
-  transition: border-color 0.2s ease, box-shadow 0.2s ease;
-}
-
-.accordion details + details {
-  margin-top: 1rem;
-}
-
-.accordion summary {
-  font-weight: 600;
-  cursor: pointer;
-  list-style: none;
-}
-
-.accordion details[open] {
-  border-color: var(--color-primary);
-  box-shadow: 0 10px 30px rgba(90, 63, 211, 0.15);
-}
-
-.accordion p {
-  margin-top: 0.75rem;
-  color: var(--color-text-light);
-}
-
-.catalogo {
-  padding: clamp(4rem, 8vw, 6rem) 0;
+/* el header se gestiona desde layout.css */
+footer {
+    background-color: #5d4d81;
+    padding: 20px;
+    text-align: center;
+    clear: both;
+  }
+  
+  .footer-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  footer ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  footer li {
+    margin-right: 20px;
+  }
+  
+  footer a {
+    text-decoration: none;
+    color: #fdfdfd;
+  }
+  
+  a:hover {
+    color: #ffffff;
+  }
+  
+  footer p {
+    font-size: 14px;
+    color: #ffffff;
+  }
+  
+  #aviso-privacidad, #terminos-y-condiciones, #mapa-de-sitio {
+    display: none;
+  }
+  
+  #aviso-privacidad:target, #terminos-y-condiciones:target, #mapa-de-sitio:target {
+    display: block;
+    position: absolute;
+  
+    left: 50%;
+    top:150%;
+    transform: translate(-50%, -50%);
+    background-color: #6e6485;
+    opacity: 80%;
+    padding: 20px;
+    border: 1px solid #ddd;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  }
+  .catalogo {
+    background-color:rgb(209, 184, 241);
+    padding: 20px;
 }
 
 .servicios-list {
