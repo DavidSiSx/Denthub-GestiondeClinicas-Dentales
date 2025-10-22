@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-labelledby="title">
+  <title>Limpieza dental</title>
+  <defs>
+    <linearGradient id="grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#8a7bcf" />
+      <stop offset="100%" stop-color="#cbbdf2" />
+    </linearGradient>
+  </defs>
+  <rect x="8" y="12" width="48" height="40" rx="12" fill="url(#grad)" opacity="0.25" />
+  <path d="M18 46c4-12 4-24 14-24s10 12 14 24" fill="none" stroke="#5d4d81" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
+  <path d="M24 22s4-6 8-6 8 6 8 6" fill="none" stroke="#5d4d81" stroke-width="3" stroke-linecap="round" />
+  <circle cx="20" cy="18" r="3" fill="#7560aa" />
+  <circle cx="44" cy="18" r="2.5" fill="#7560aa" />
+</svg>

@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-labelledby="title">
+  <title>Diseño de sonrisa</title>
+  <defs>
+    <linearGradient id="grad3" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#cbbdf2" />
+      <stop offset="100%" stop-color="#5d4d81" />
+    </linearGradient>
+  </defs>
+  <circle cx="32" cy="32" r="24" fill="url(#grad3)" opacity="0.25" />
+  <path d="M20 32c2 6 6 10 12 10s10-4 12-10" fill="none" stroke="#5d4d81" stroke-width="3" stroke-linecap="round" />
+  <path d="M22 26s4-4 10-4 10 4 10 4" fill="none" stroke="#5d4d81" stroke-width="3" stroke-linecap="round" />
+  <circle cx="24" cy="22" r="2" fill="#5d4d81" />
+  <circle cx="40" cy="22" r="2" fill="#5d4d81" />
+</svg>

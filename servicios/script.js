@@ -1,19 +1,23 @@
 // script.js
 document.addEventListener('DOMContentLoaded', () => {
-    const buttons = document.querySelectorAll('.btn-ver-mas');
+    document.querySelectorAll('.service-card').forEach((card) => {
+        const button = card.querySelector('.service-card__toggle');
+        const panel = card.querySelector('.service-card__details');
 
-    buttons.forEach(button => {
-        const target = document.getElementById(button.getAttribute('data-target'));
-        target.style.display = 'none'; // Ensure the details are hidden by default
+        if (!button || !panel) {
+            return;
+        }
+
+        panel.classList.remove('is-open');
+        panel.setAttribute('aria-hidden', 'true');
+        button.setAttribute('aria-expanded', 'false');
 
         button.addEventListener('click', () => {
-            if (target.style.display === 'none' || target.style.display === '') {
-                target.style.display = 'block';
-                button.textContent = 'Ocultar';
-            } else {
-                target.style.display = 'none';
-                button.textContent = 'Ver más';
-            }
+            const isOpen = panel.classList.toggle('is-open');
+            button.setAttribute('aria-expanded', String(isOpen));
+            panel.setAttribute('aria-hidden', String(!isOpen));
+            button.textContent = isOpen ? 'Ocultar detalles' : 'Ver más';
         });
     });
 });
+

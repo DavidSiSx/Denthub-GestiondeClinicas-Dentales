@@ -286,145 +286,48 @@ footer {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
   }
   .catalogo {
-    background-color:rgb(209, 184, 241);
-    padding: 20px;
-}
-
-.servicios-list {
-  display: grid;
-  gap: 2rem;
-}
-
-.servicios-list li {
-  display: grid;
-  gap: 1.5rem;
-  grid-template-columns: auto 1fr;
-  align-items: start;
-  background: var(--color-surface);
-  border-radius: var(--radius-lg);
-  padding: clamp(1.75rem, 3vw, 2.25rem);
-  box-shadow: var(--shadow-soft);
-}
-
-.servicios-list img {
-  width: clamp(96px, 12vw, 120px);
-  height: auto;
-}
-
-.servicios-list h3 {
-  font-size: 1.3rem;
-  margin-bottom: 0.5rem;
-}
-
-.servicios-list p {
-  color: var(--color-text-light);
-  margin-bottom: 1rem;
-}
-
-.detalles {
-  margin-top: 1rem;
-  color: var(--color-text-light);
-}
-
-.btn-ver-mas {
-  align-self: start;
-}
-
-.testimonials {
-  background: linear-gradient(135deg, rgba(90, 63, 211, 0.1), rgba(111, 86, 222, 0.06));
-  padding: clamp(4rem, 8vw, 6rem) 0;
-}
-
-.testimonials ul {
-  display: grid;
-  gap: 1.5rem;
-}
-
-.testimonials li {
-  background: var(--color-surface);
-  border-radius: var(--radius-md);
-  padding: 1.75rem 2rem;
-  box-shadow: var(--shadow-soft);
-}
-
-.testimonials p {
-  font-style: italic;
-  margin-bottom: 0.75rem;
-}
-
-.testimonials span {
-  font-weight: 600;
-  color: var(--color-text-light);
-}
-
-.site-footer {
-  background: var(--color-surface);
-  padding: 2.5rem 5vw 3rem;
-  box-shadow: 0 -8px 24px rgba(40, 23, 86, 0.08);
-}
-
-.footer-container {
-  width: min(960px, 92vw);
-  margin: 0 auto;
-  text-align: center;
-}
-
-.footer-container ul {
-  display: flex;
-  justify-content: center;
-  gap: 1.75rem;
-  margin-bottom: 1.5rem;
-  font-weight: 600;
-  color: var(--color-text-light);
-}
-
-.footer-container a:hover {
-  color: var(--color-primary);
-}
-
-.legal-modal {
-  display: none;
-}
-
-@media (max-width: 1024px) {
-  .main-nav {
-    flex-wrap: wrap;
+    background-color: rgb(209, 184, 241);
+    padding: 40px 0;
   }
 
-  .steps-grid {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
+  .catalogo .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 56px 24px;
+    background: rgba(17, 14, 24, 0.35);
+    border-radius: 24px;
+    backdrop-filter: blur(8px);
   }
 
-  .appointment-layout {
-    grid-template-columns: 1fr;
-  }
-}
-
-@media (max-width: 720px) {
-  .navbar-items {
-    width: 100%;
-    justify-content: center;
-  }
-
-  .steps-grid,
-  .servicios-list {
-    grid-template-columns: 1fr;
-  }
-
-  .servicios-list li {
-    grid-template-columns: 1fr;
+  .catalogo h1 {
     text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 2.5rem;
+    color: #ffffff;
   }
 
-  .hero .hero-content {
-    min-height: auto;
+  @media (max-width: 768px) {
+    .catalogo {
+      padding: 32px 0;
+    }
+
+    .catalogo .container {
+      padding: 44px 20px;
+    }
+
+    .catalogo h1 {
+      font-size: 2.25rem;
+    }
   }
 
-  .hero-actions {
-    width: 100%;
+  @media (max-width: 480px) {
+    .catalogo .container {
+      padding: 32px 16px;
+      border-radius: 18px;
+    }
+
+    .catalogo h1 {
+      font-size: 2rem;
+    }
   }
 
-  .btn {
-    width: 100%;
-  }
-}
